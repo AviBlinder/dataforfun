@@ -4,27 +4,32 @@
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
-                           <!-- <img src="./assets/DataForFun_Logo.png" alt="Logo"> -->
-                           <router-link to="/" tag="a">
-                           </router-link> 
-
-                                
-                            <span class="navbar-burger burger" data-target="navbarMenu">
+                          <img src="../assets/DataForFun_Logo.png" alt="DFF Logo" 
+                          width="50" >
+                              
+                            <span class="navbar-burger" 
+                            @click="showNav = !showNav" :class="{ 'is-active': showNav }"
+                            data-target="navbarMenu"
+                            >
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </span>
                         </div>
-                        <div id="navbarMenu" class="navbar-menu">
+                        <div id="navbarMenu" class="navbar-menu" :class="{ 'is-active': showNav }">
                             <div class="navbar-end">
                                 <div class="tabs is-right">
                                     <ul>
-                                      <router-link style="margin-left:1rem" to="/" tag="li">Home </router-link> 
+                                      <router-link style=" margin-right:1rem" :to="{name: 'Home'}" tag="li">Home </router-link> 
 
-                                      <router-link style="margin-left:1rem" to="/projects" tag="li">Projects</router-link> 
-                                      <router-link style="margin-left:1rem" to="/tools" tag="li">Tools</router-link> 
-                                      <router-link style="margin-left:1rem" to="/posts" tag="li">Blog</router-link> 
-                                      <router-link style="margin-left:1rem" to="/About" tag="li">About</router-link> 
+                                      <router-link style="margin-right:1rem" :to="{name: 'Projects'}" tag="li">Projects</router-link> 
+                                      
+                                      <router-link style="margin-right:1rem" :to="{name: 'Tools'}" tag="li">Tools</router-link> 
+                                      
+                                      <router-link style="margin-right:1rem" :to="{name: 'Posts'}" tag="li">Blog</router-link> 
+                                      
+                                      <router-link style="margin-right:2rem" :to="{name: 'About'}" tag="li">About</router-link> 
+                               
                                     </ul>
 
                                 </div>
@@ -39,10 +44,17 @@
 
 <script>
 export default {
-  
+  data(){
+    return{
+        	showNav: false
+    }
+  }
 }
 </script>
 
 <style scoped>
+/* .router-link-active{
+  background:red;
+} */
 
 </style>
