@@ -9,9 +9,6 @@
                     In a Sea of Data you can just relax and enjoy the journey
                     </h1>
 
-<p><img class="aligncenter wp-image-465 size-full" title="Basic Algorithm - Raw Numbers" 
-src="../assets/Baisc_raw_numbers.png" alt="baisc_raw_numbers" width="490" height="199" srcset="../assets/Baisc_raw_numbers.png 490w, ../assets/Baisc_raw_numbers-300x122.png 300w" sizes="(max-width: 490px) 100vw, 490px" /><img class="aligncenter wp-image-464 size-full" title="Basic Algorithm - Percentages" src="../assets/Baisc_perc_numbers.png" alt="baisc_perc_numbers" width="492" height="210" srcset="../assets/Baisc_perc_numbers.png 492w, ../assets/Baisc_perc_numbers-300x128.png 300w" sizes="(max-width: 492px) 100vw, 492px" /></p>
-
                 </div>
             </div>
 </section>
