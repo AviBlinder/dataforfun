@@ -9,8 +9,6 @@
           Kickstarter &#8211; Before you launch a new project, check success
           rates
         </h1>
-
-
       </div>
       <!-- .et_post_meta_wrapper -->
 
