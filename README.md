@@ -6,6 +6,10 @@ npm run git:commit --comment="test script"
 
 ```
 
+## Icons Generator 
+```
+npx vue-pwa-asset-generator -a public/img/icons/DataForFun_Logo.png public/img/icons_new/
+```
 ## Project setup
 ```
 npm install
