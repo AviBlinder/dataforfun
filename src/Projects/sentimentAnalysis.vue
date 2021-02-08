@@ -2,36 +2,36 @@
   <div>
     <section>
       <div class="et_pb_text_inner">
-        <h2>Classification of Yelp User&#8217;s reviews</h2>
+        <h2>Classification of Yelp User's reviews</h2>
         <p>&nbsp;</p>
         <h3><span style="color: #3366ff;">Introduction</span></h3>
         <p>
           The purpose of this project was to compare between a
-          &#8220;basic&#8221; sentiment analysis algorithm and a more elaborate
+          'basic' sentiment analysis algorithm and a more elaborate
           one.
         </p>
         <p>
-          The algorithms were tested thru the &#8220;reviews&#8221; done by
+          The algorithms were tested thru the 'reviews' done by
           users (mainly for restaurants) as they were supplied by Yelp for
-          2016&#8217;s challenge (&#8220;Round 8&#8221;) in the
-          &#8220;business&#8221; JSON dataset.
+          2016's challenge ('Round 8') in the
+          'business' JSON dataset.
         </p>
         <p>
           In this dataset, there are two main fields of interest for this
-          project: &#8220;<strong>text</strong>&#8221; which contains a
+          project: '<strong>text</strong>' which contains a
           (qualitative) review by a user for a specific business, and
-          &#8220;<strong>stars</strong>&#8220;, which is a numeric ranking
+          '<strong>stars</strong>', which is a numeric ranking
           (ranging from 1 to 5), usually meaning a quantitative feedback.
         </p>
         <p>
-          <u>&#8220;The Sentiment&#8221;</u>: The output of both algorithms (the
+          <u>'The Sentiment'</u>: The output of both algorithms (the
           benchmark and the advanced one) was a classification of each review by
-          one of three possible sentiments: &#8220;Positive&#8221;,
-          &#8220;Neutral&#8221; or &#8220;Negative&#8221;.
+          one of three possible sentiments: 'Positive',
+          'Neutral' or 'Negative'.
         </p>
         <p>
           <u>Validating the results</u>: The validation of each classification
-          was done by using the &#8220;stars&#8221; that the user gives the
+          was done by using the 'stars' that the user gives the
           business being ranked, along with the review.
         </p>
         <p>
@@ -46,7 +46,7 @@
         <h3><span style="color: #3366ff;">The Analysis</span></h3>
         <h4>
           <span style="color: #3366ff;"
-            >Part 1 &#8211; The &#8220;basic&#8221; algorithm.</span
+            >Part 1 &#8211; The 'basic' algorithm.</span
           >
         </h4>
         <p>
@@ -59,7 +59,7 @@
             Read a lexicon containing positive and negative words &#8211; the
             list of words is based on
             <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html"
-              >Hu and Liu&#8217;s lexicon</a
+              >Hu and Liu's lexicon</a
             >
           </li>
           <li>
@@ -68,7 +68,7 @@
             <ul>
               <li>convert all words to lowercase</li>
               <li>remove punctuation</li>
-              <li>remove &#8220;english&#8221; stop words</li>
+              <li>remove 'english' stop words</li>
             </ul>
           </li>
           <li>Count the negative and positive words in each corpus.</li>
@@ -83,7 +83,7 @@
           ranking that each user gave, together with the review.
         </p>
         <p>
-          After running a sample of 800,000 reviews, the basic algorithm&#8217;s
+          After running a sample of 800,000 reviews, the basic algorithm's
           results are as follows (the colored heatmap should be read
           column-wise: the green thru yellow coloring is per column, going from
           the highest to the lowest values):
@@ -128,7 +128,7 @@
         </p>
         <p>
           <span style="font-size: 14pt; line-height: 107%; color: #3366ff;"
-            >Part 2 &#8211; The &#8220;advanced&#8221; algorithm.</span
+            >Part 2 &#8211; The 'advanced' algorithm.</span
           >
         </p>
         <p>
@@ -138,16 +138,16 @@
         </p>
         <p>
           In addition, certain tweaks can be applied to the algorithm by
-          assigning different &#8220;weights&#8221; to different parts of the
+          assigning different 'weights' to different parts of the
           analysis. For example, if someone writes that a place was AWFUL, the
-          &#8220;calculated&#8221; meaning can be &#8220;negative word&#8221; *
-          2 (e.g. twice as negative as just &#8220;awful&#8221;).
+          'calculated' meaning can be 'negative word' *
+          2 (e.g. twice as negative as just 'awful').
         </p>
         <p>The following weights were set for the current analysis:</p>
         <ul>
-          <li>&#8220;negations weight&#8221; = 1</li>
-          <li>&#8220;uppercase weight&#8221; = 5</li>
-          <li>&#8220;confirmation weight&#8221; = 3</li>
+          <li>'negations weight' = 1</li>
+          <li>'uppercase weight' = 5</li>
+          <li>'confirmation weight' = 3</li>
         </ul>
         <p>
           Without going into too much detail, the advanced algorithm implements
@@ -160,18 +160,18 @@
               <li>
                 Since some <em>stop words</em> change the meaning of the review,
                 prior to their removal, some expressions are checked and
-                replaced by their meaning (e.g. &#8220;good&#8221; or
-                &#8220;bad&#8221;).
+                replaced by their meaning (e.g. 'good' or
+                'bad').
               </li>
               <li>
-                Ambiguous words, such as &#8220;like&#8221;, can be part of the
+                Ambiguous words, such as 'like', can be part of the
                 subject and/or predicate of a sentence.
               </li>
             </ul>
           </li>
           <li>
             Handling expressions and replacing them with the words
-            &#8220;good&#8221; or &#8220;bad&#8221;, to simplify the upcoming
+            'good' or 'bad', to simplify the upcoming
             analysis.
           </li>
           <li>
@@ -179,9 +179,9 @@
             sentiment
           </li>
           <li>
-            &#8220;Negation check&#8221;: For each positive or negative word
-            found, a negation word (such as &#8220;no&#8221;,
-            &#8220;not&#8221;), placed one or two positions prior to the
+            'Negation check': For each positive or negative word
+            found, a negation word (such as 'no',
+            'not'), placed one or two positions prior to the
             positive/negative word itself, is looked up. If such a word is
             found, a recalculation of sentiment is performed, changing the value
             from positive to negative and vice versa.
@@ -199,22 +199,22 @@
         </p>
         <ol start="5">
           <li>
-            &#8220;Confirmation check&#8221;: Words such as &#8220;so&#8221;,
-            &#8220;too&#8221;, etc., prior to a positive or negative word, tend
+            'Confirmation check': Words such as 'so',
+            'too', etc., prior to a positive or negative word, tend
             to express a stronger feeling, so if such words are found (and
             according to the pre-set weight), a new calculation of the sentiment
             is performed.
           </li>
           <li>
-            &#8220;Uppercase check&#8221;: Similar to the
-            &#8220;confirmation&#8221; logic, if a word is written in uppercase,
+            'Uppercase check': Similar to the
+            'confirmation' logic, if a word is written in uppercase,
             its meaning is emphasized, so according to the pre-set weight,
             another re-calculation is done in such cases.
           </li>
         </ol>
         <p>
           After running a similar sample of 800000 reviews, the advanced
-          algorithm&#8217;s results are as follows:
+          algorithm's results are as follows:
         </p>
         <p>
           <img
@@ -260,15 +260,15 @@
         </p>
         <h3><span style="color: #3366ff;">Conclusion</span></h3>
         <p>
-          The &#8220;basic&#8221; model, as it sometimes happens with
-          &#8220;naïve&#8221; models, performs relatively well when applied to
-          Yelp&#8217;s corpus of reviews, at least when classifying Positive and
+          The 'basic' model, as it sometimes happens with
+          'naïve' models, performs relatively well when applied to
+          Yelp's corpus of reviews, at least when classifying Positive and
           Neutral ones.
         </p>
         <p>
-          The &#8220;advanced&#8221; model offers certain improvements
+          The 'advanced' model offers certain improvements
           classifying mainly negative reviews, but generally it appears that
-          upset or disappointed customers tend to be more &#8220;poetic&#8221;
+          upset or disappointed customers tend to be more 'poetic'
           (e.g. tend to use more irony, sarcasm and cynicism) when writing a
           negative review, which makes classification more complicated.
         </p>
@@ -316,14 +316,14 @@
           <li>
             Some rounds of the project were performed on AWS instances (M4
             family) and based on a private RStudio AMI, equipped with
-            &#8220;git&#8221; integration, thus allowing an ongoing development
+            'git' integration, thus allowing an ongoing development
             and testing process.
           </li>
         </ol>
         <p>
           Running on an m4.4xlarge EC2 instance, the analysis of 800000 reviews
           took around 3 hours and 50 minutes. Since the execution was with
-          &#8220;spot instances&#8221;, and the cost per hour was less than 20
+          'spot instances', and the cost per hour was less than 20
           cents, the total cost being less than 80 cents….
         </p>
       </div>
