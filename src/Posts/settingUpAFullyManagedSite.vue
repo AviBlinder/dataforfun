@@ -1,29 +1,20 @@
 <template>
   <div>
-    <article
-      id="post-921"
-      class="et_pb_post post-921 post type-post status-publish format-standard hentry category-aws category-data_science_topics"
-    >
-      <div class="et_post_meta_wrapper">
+    <article id="post-921">
+      <div>
         <h1 class="entry-title">Setting up a fully managed website in AWS</h1>
-
-
       </div>
       <!-- .et_post_meta_wrapper -->
 
       <div class="entry-content">
-        <div id="et-boc" class="et-boc">
-          <div class="et-l et-l--post">
-            <div class="et_builder_inner_content et_pb_gutters3">
-              <div class="et_pb_section et_pb_section_0 et_section_regular">
-                <div class="et_pb_row et_pb_row_0">
-                  <div
-                    class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child"
-                  >
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+        <div id="">
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
                         <p>
                           Finally, I finished migrating my website from a web
                           hosting platform to AWS.
@@ -38,26 +29,25 @@
                         <p>
                           The purpose of this post is to describe, step by step,
                           the architecture that I implemented in AWS in order to
-                          host my site, also sharing some tips and lessons
-                          I&#8217;ve learned in this journey in hope that it
-                          will save others some hurdles.
+                          host my site, also sharing some tips and lessons I've
+                          learned in this journey in hope that it will save
+                          others some hurdles.
                         </p>
                         <p>
-                          The architecture that I&#8217;ve implemented for
-                          hosting a web site can easily suit also other use
-                          cases, such as web applications, e-commerce sites and
-                          more.
+                          The architecture that I've implemented for hosting a
+                          web site can easily suit also other use cases, such as
+                          web applications, e-commerce sites and more.
                         </p>
-                        <p>So, let&#8217;s start from the beginning:</p>
+                        <p>So, let's start from the beginning:</p>
                         <p>&nbsp;</p>
-                        <h3>Creating the basic &#8220;virtual space&#8221;:</h3>
+                        <h3>Creating the basic 'virtual space':</h3>
                         <ol>
                           <li>
                             The first step includes
                             <strong>setting a VPC</strong> (Virtual Private
-                            Cloud). As its name suggests, it is a &#8220;private
-                            network&#8221; within AWS cloud. It has a specific
-                            range of IP addresses, which can be allocated to the
+                            Cloud). As its name suggests, it is a 'private
+                            network' within AWS cloud. It has a specific range
+                            of IP addresses, which can be allocated to the
                             resources that are being allocated.
                           </li>
                           <li>
@@ -91,26 +81,19 @@
                         </ol>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div
-                      class="et_pb_module et_pb_image et_pb_image_0 et_pb_image_sticky"
-                    >
-                      <span class="et_pb_image_wrap "
+
+                    <div>
+                      <span
                         ><img
                           src="../assets/DFF-Architecture-VPC-setup.png"
                           alt=""
                           title=""
                       /></span>
                     </div>
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+                    <div>
+                      <div>
                         <h3></h3>
-                        <h3>
-                          Adding &#8220;elasticity&#8221; and
-                          &#8220;durability&#8221;
-                        </h3>
+                        <h3>Adding 'elasticity' and 'durability'</h3>
                         <p>
                           5. Two of the greatest features of a cloud service
                           (and of course AWS) are their built-in mechanisms of
@@ -134,11 +117,10 @@
                           hence routing traffic only to healthy ones) and
                           balancing traffic evenly across associated instances.
                           In order to manage my costs in an effective way, I
-                          associated one &#8220;fixed&#8221;
+                          associated one 'fixed'
                           <strong>Reserved Instance</strong> to the ELB (since
                           it serves a 24/7 site, I decided pre-paying for it for
-                          a whole year and thus &#8220;reserving&#8221; the
-                          resource)
+                          a whole year and thus 'reserving' the resource)
                         </p>
                         <p>
                           <strong>AutoScaling: </strong> a second, optional
@@ -146,64 +128,60 @@
                           in case of increased traffic and associated to the
                           <strong>ELB</strong>, is triggered thru the
                           Auto-scaling mechanism. Also in this case, in order to
-                          manage costs, I decided to &#8220;bid&#8221; for a
-                          maximum price for this additional resource, under the
-                          assumption that higher traffics on a specific site are
-                          not related to spikes of demands in the whole
-                          availability zone. The auto-scaling service will shut
-                          down the additional instance once traffic goes down
-                          and can be served by a single instance. In the future,
-                          if traffic is higher for longer periods of time, the
-                          auto-scaling policy can be modified seamlessly so that
-                          more instances are optionally triggered.
+                          manage costs, I decided to 'bid' for a maximum price
+                          for this additional resource, under the assumption
+                          that higher traffics on a specific site are not
+                          related to spikes of demands in the whole availability
+                          zone. The auto-scaling service will shut down the
+                          additional instance once traffic goes down and can be
+                          served by a single instance. In the future, if traffic
+                          is higher for longer periods of time, the auto-scaling
+                          policy can be modified seamlessly so that more
+                          instances are optionally triggered.
                         </p>
                         <h3>Routing traffic</h3>
                         <p>
-                          Since I&#8217;m hosting my domain also under AWS, the
-                          next taken step is configuring creating a
+                          Since I'm hosting my domain also under AWS, the next
+                          taken step is configuring creating a
                           <strong>hosted zone</strong> under
                           <strong>Route53</strong> service so different
                           variations of the site name and subdomains are routed
                           to the correct instances.
                         </p>
                         <p>
-                          Since I&#8217;m using an ELB, which serves as umbrella
-                          for routing traffic to any number of associated
-                          instances, an &#8220;A&#8221; record is created
-                          mapping between the domain name and the ELB resource
-                          name.
+                          Since I'm using an ELB, which serves as umbrella for
+                          routing traffic to any number of associated instances,
+                          an 'A' record is created mapping between the domain
+                          name and the ELB resource name.
                         </p>
                         <p>
                           As I will describe in a later step, one great feature
-                          of Route53 is its &#8220;<strong
-                            >failure policy</strong
-                          >&#8220;, which lets you route traffic to a completely
-                          different region or to a static site (hosted under
-                          S3), in case of total failure of the current region.
+                          of Route53 is its '<strong>failure policy</strong>',
+                          which lets you route traffic to a completely different
+                          region or to a static site (hosted under S3), in case
+                          of total failure of the current region.
                         </p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div class="et_pb_module et_pb_image et_pb_image_1">
-                      <span class="et_pb_image_wrap "
+
+                    <div>
+                      <span
                         ><img
                           src="../assets/DFF-Architecture-Step-1.png"
                           alt=""
                           title=""
                       /></span>
                     </div>
-                    <div class="et_pb_module et_pb_image et_pb_image_2">
-                      <span class="et_pb_image_wrap "
+                    <div>
+                      <span
                         ><img
                           src="../assets/DFF-Architecture-Step-2.png"
                           alt=""
                           title=""
                       /></span>
                     </div>
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+                    <div>
+                      <div>
                         <p>&nbsp;</p>
                         <h3>Reducing Internet latency</h3>
                         <p>
@@ -216,13 +194,11 @@
                         </p>
                         <p>
                           AWS offers a fully managed Content Delivery Network
-                          (CDN) or &#8220;content replication&#8221; service
-                          called <strong>CloudFront</strong>: this service is
-                          meant to cache and replicate web contents (such as
-                          media files) across many &#8220;<strong
-                            >edge points</strong
-                          >&#8221; spread worldwide, thus reducing latency
-                          issues to a minimum.
+                          (CDN) or 'content replication' service called
+                          <strong>CloudFront</strong>: this service is meant to
+                          cache and replicate web contents (such as media files)
+                          across many '<strong>edge points</strong>' spread
+                          worldwide, thus reducing latency issues to a minimum.
                         </p>
                         <p>
                           In order to have updated contents propagated across
@@ -236,7 +212,7 @@
                             the site to an
                             <strong>S3 bucket containing the media files</strong
                             >. (In fact two buckets: one holding media files and
-                            one holding the whole site&#8217;s code. This second
+                            one holding the whole site's code. This second
                             bucket is the base of any new launched instance).
                           </li>
                           <li>
@@ -254,19 +230,17 @@
                         </p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div class="et_pb_module et_pb_image et_pb_image_3">
-                      <span class="et_pb_image_wrap "
+
+                    <div class="et_pb_image_3">
+                      <span
                         ><img
                           src="../assets/DFF-Architecture-Step-3.png"
                           alt=""
                           title=""
                       /></span>
                     </div>
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+                    <div>
+                      <div>
                         <p>&nbsp;</p>
                         <h3>Adding some extra fault tolerance</h3>
                         <p>
@@ -278,86 +252,75 @@
                           In my case, I decided to add an extra layer of fault
                           tolerance, thru the <strong>failover</strong> policy:
                           all the resources within the VPC are associated to the
-                          &#8220;<strong>primary&#8221; record type</strong>
-                          (e.g. I created several &#8220;A&#8221; records mapped
-                          to the ELB and defined them as primary record types).
-                          In case of a major failure (two availability zones
-                          going down, or a major bug in my site), Route53
-                          seamlessly will route all the traffic to the
-                          <strong>&#8220;secondary&#8221; </strong>resource: in
-                          my case a static website hosted in an S3 bucket.
+                          '<strong>primary' record type</strong>
+                          (e.g. I created several 'A' records mapped to the ELB
+                          and defined them as primary record types). In case of
+                          a major failure (two availability zones going down, or
+                          a major bug in my site), Route53 seamlessly will route
+                          all the traffic to the
+                          <strong>'secondary' </strong>resource: in my case a
+                          static website hosted in an S3 bucket.
                         </p>
                         <h3>Seeing the whole pictures</h3>
                         <p>
                           AWS <strong>tags </strong>are a great way of mapping
                           all the resources allocated to a specific project,
-                          thus letting you see the &#8220;whole&#8221; picture
-                          of all involved resources across all regions, and of
-                          course letting you track costs in a consistent way.
+                          thus letting you see the 'whole' picture of all
+                          involved resources across all regions, and of course
+                          letting you track costs in a consistent way.
                         </p>
                         <p>
                           So, in my case, for all the resources that I created,
-                          I added at least one tag: &#8220;project&#8221; with
-                          my project name as its value.
+                          I added at least one tag: 'project' with my project
+                          name as its value.
                         </p>
                         <p>
-                          Now, I can open the &#8220;<strong
-                            >resource group&#8221; tool</strong
+                          Now, I can open the '<strong
+                            >resource group' tool</strong
                           >, create a new group and review all the resources
                           associated with my project.
                         </p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div class="et_pb_module et_pb_image et_pb_image_4">
-                      <span class="et_pb_image_wrap "
+
+                    <div class="et_pb_image_4">
+                      <span
                         ><img
                           src="../assets/DFF-Architecture-Final.png"
                           alt=""
                           title=""
                       /></span>
                     </div>
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+                    <div>
+                      <div>
                         <p>&nbsp;</p>
                         <p>
-                          That&#8217;s it, more or less, the whole picture of
-                          this project.
+                          That's it, more or less, the whole picture of this
+                          project.
                         </p>
                         <p>I hope you find it useful.</p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light"
-                    ></div>
-                    <!-- .et_pb_text -->
+
+                    <div></div>
                   </div>
-                  <!-- .et_pb_column -->
                 </div>
-                <!-- .et_pb_row -->
               </div>
-              <!-- .et_pb_section -->
             </div>
-            <!-- .et_builder_inner_content -->
           </div>
-          <!-- .et-l -->
+          <!-- .-->
         </div>
-        <!-- #et-boc -->
+        <!-- # -->
       </div>
       <!-- .entry-content -->
-      <div class="et_post_meta_wrapper">
-      
-      </div>
+      <div></div>
       <!-- .et_post_meta_wrapper -->
     </article>
   </div>
 </template>
 
 <script>
-  export default {};
+export default {};
 </script>
 
 <style scoped></style>

@@ -1,33 +1,24 @@
 <template>
-  <article
-    id="post-656"
-    class="et_pb_post post-656 post type-post status-publish format-standard hentry category-data-analysis category-data_science_topics category-date_viz category-r-post tag-r-post"
-  >
-    <div class="et_post_meta_wrapper">
+  <article id="post-656">
+    <div>
       <h1 class="entry-title">
         Analyzing R package trends and adoption of new technologies by the R
         community
       </h1>
     </div>
-    <!-- .et_post_meta_wrapper -->
-
     <div class="entry-content">
-      <div id="et-boc" class="et-boc">
-        <div class="et-l et-l--post">
-          <div class="et_builder_inner_content et_pb_gutters3">
-            <div class="et_pb_section et_pb_section_0 et_section_regular">
-              <div class="et_pb_row et_pb_row_0">
-                <div
-                  class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child"
-                >
-                  <div
-                    class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light"
-                  >
-                    <div class="et_pb_text_inner">
+      <div id="">
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
                       <h3>Introduction</h3>
                       <p>
                         Ever wondered how a certain technology is adopted by the
-                        R users&#8217; community?
+                        R users' community?
                       </p>
                       <p>
                         Ever wanted to know how a specific package is downloaded
@@ -35,7 +26,7 @@
                       </p>
                       <p>
                         In order to answer those questions and similar ones,
-                        I&#8217;ve created the<span style="color: #3366ff;"
+                        I've created the<span style="color: #3366ff;"
                           ><strong>
                             <a
                               style="color: #3366ff;"
@@ -143,8 +134,8 @@
                       <ol>
                         <li>
                           <strong>MongoDB</strong>: &nbsp;Since this is the most
-                          &#8216;veteran&#8217; technology, it has (or had)
-                          three different R packages:
+                          &#8216;veteran' technology, it has (or had) three
+                          different R packages:
                           <ul>
                             <li>
                               rmongodb: This package was quite popular (see plot
@@ -174,9 +165,8 @@
                                   ></span
                                 >:</strong
                               >
-                              A&nbsp;MongoDB client based on
-                              &#8216;libmongoc&#8217; and &#8216;jsonlite&#8217;
-                              packages.
+                              A&nbsp;MongoDB client based on &#8216;libmongoc'
+                              and &#8216;jsonlite' packages.
                             </li>
                           </ul>
                         </li>
@@ -244,50 +234,12 @@
                       </p>
                     </div>
                   </div>
-                  <!-- .et_pb_text -->
-                  <div class="et_pb_module et_pb_code et_pb_code_0">
-                    <div class="et_pb_code_inner">
-                      <!-- <script
-                        type="text/javascript"
-                        src="https://ssl.gstatic.com/trends_nrtr/815_RC05/embed_loader.js"
-                      ></script>
-                      <script type="text/javascript">
-                        trends.embed.renderExploreWidget(
-                          'TIMESERIES',
-                          {
-                            comparisonItem: [
-                              {
-                                keyword: '/m/0ndhxqz',
-                                geo: '',
-                                time: '2016-06-18 2016-11-18',
-                              },
-                              {
-                                keyword: 'neo4j',
-                                geo: '',
-                                time: '2016-06-18 2016-11-18',
-                              },
-                              {
-                                keyword: '/m/05z_r2n',
-                                geo: '',
-                                time: '2016-06-18 2016-11-18',
-                              },
-                            ],
-                            category: 0,
-                            property: '',
-                          },
-                          {
-                            exploreQuery:
-                              'date=2016-06-18%202016-11-18&q=%2Fm%2F0ndhxqz,neo4j,%2Fm%2F05z_r2n',
-                          }
-                        );
-                      </script> -->
-                    </div>
+
+                  <div>
+                    <div></div>
                   </div>
-                  <!-- .et_pb_code -->
-                  <div
-                    class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light"
-                  >
-                    <div class="et_pb_text_inner">
+                  <div>
+                    <div>
                       <p>
                         According to Google trends plot, MongoDB is by far the
                         most frequently searched (and thus popular?) technology
@@ -295,8 +247,8 @@
                       </p>
                       <p>
                         It looks like the trends are quite stable, meaning that
-                        each technology/database keeps its &#8220;status
-                        quo&#8221; in relation to the others.
+                        each technology/database keeps its 'status quo' in
+                        relation to the others.
                       </p>
                       <p>
                         Also, an interesting pattern is the weekly drops in
@@ -305,11 +257,8 @@
                       </p>
                     </div>
                   </div>
-                  <!-- .et_pb_text -->
-                  <div
-                    class="et_pb_module et_pb_image et_pb_image_0 et_pb_image_sticky"
-                  >
-                    <span class="et_pb_image_wrap "
+                  <div>
+                    <span
                       ><img
                         src="../assets/Daily-Downloads-of-Selected-Packages-1.png"
                         alt="Daily Downloads of MongoDB vs RNeo4j vs Spark related packages"
@@ -324,10 +273,8 @@
                         sizes="(max-width: 1862px) 100vw, 1862px"
                     /></span>
                   </div>
-                  <div
-                    class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light"
-                  >
-                    <div class="et_pb_text_inner">
+                  <div>
+                    <div>
                       <p>
                         In order to make a similar comparison based on
                         <em
@@ -339,17 +286,17 @@
                       </p>
                       <p>
                         Evidently, since its upload to CRAN on September 24
-                        2016, <strong>sparklyr</strong> seems to be &#8220;on
-                        steroids&#8221;: compared to Google Trends, it is
-                        downloaded more than three times more often than all the
-                        other packages combinded.
+                        2016, <strong>sparklyr</strong> seems to be 'on
+                        steroids': compared to Google Trends, it is downloaded
+                        more than three times more often than all the other
+                        packages combinded.
                       </p>
                       <p>&nbsp;</p>
                     </div>
                   </div>
-                  <!-- .et_pb_text -->
-                  <div class="et_pb_module et_pb_image et_pb_image_1">
-                    <span class="et_pb_image_wrap "
+
+                  <div>
+                    <span
                       ><img
                         src="../assets/Distribution-of-Packages-by-Continent.png"
                         alt="Distribution of package downloads by Continents"
@@ -364,10 +311,8 @@
                         sizes="(max-width: 1862px) 100vw, 1862px"
                     /></span>
                   </div>
-                  <div
-                    class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light"
-                  >
-                    <div class="et_pb_text_inner">
+                  <div>
+                    <div>
                       <p>
                         A comparison of the distribution of downloads by
                         continent, which does not take into account population
@@ -392,9 +337,9 @@
                       </ol>
                     </div>
                   </div>
-                  <!-- .et_pb_text -->
-                  <div class="et_pb_module et_pb_image et_pb_image_2">
-                    <span class="et_pb_image_wrap "
+
+                  <div>
+                    <span
                       ><img
                         src="../assets/Daily-Downloads-of-MongoDB-Related-Packages.png"
                         alt="Daily Downloads of MongoDB-related packages"
@@ -409,10 +354,8 @@
                         sizes="(max-width: 1862px) 100vw, 1862px"
                     /></span>
                   </div>
-                  <div
-                    class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light"
-                  >
-                    <div class="et_pb_text_inner">
+                  <div>
+                    <div>
                       <h3>Conclusion</h3>
                       <p>
                         Each of those tools may create a different picture of
@@ -426,32 +369,19 @@
                       <p>
                         On the other hand, we get quite a different picture of
                         the same technologies, based on the rate at which they
-                        are adopted by the R users&#8217; community, as
-                        reflected in RStudio CRAN download logs.
+                        are adopted by the R users' community, as reflected in
+                        RStudio CRAN download logs.
                       </p>
                     </div>
                   </div>
-                  <!-- .et_pb_text -->
-
-                  <!-- .et_pb_text -->
                 </div>
-                <!-- .et_pb_column -->
               </div>
-              <!-- .et_pb_row -->
             </div>
-            <!-- .et_pb_section -->
           </div>
-          <!-- .et_builder_inner_content -->
         </div>
-        <!-- .et-l -->
       </div>
-      <!-- #et-boc -->
     </div>
-    <!-- .entry-content -->
-
-    <!-- .et_post_meta_wrapper -->
   </article>
-  <!-- .et_pb_post -->
 </template>
 
 <script>

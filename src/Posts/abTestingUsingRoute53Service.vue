@@ -2,25 +2,20 @@
   <div>
     <h1>AB Testing</h1>
 
-    <article
-      class="et_pb_post post-959 post type-post status-publish format-standard hentry category-ab-testing category-aws category-data-analysis category-route53">
-      <div class="et_post_meta_wrapper">
+    <article class=" post-959 post      ">
+      <div>
         <h1 class="entry-title">A\B testing with Route53 (An AWS Service)</h1>
       </div>
 
       <div class="entry-content">
-        <div id="et-boc" class="et-boc">
-          <div class="et-l et-l--post">
-            <div class="et_builder_inner_content et_pb_gutters3">
-              <div class="et_pb_section et_pb_section_0 et_section_regular">
-                <div class="et_pb_row et_pb_row_0">
-                  <div
-                    class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child"
-                  >
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+        <div id="">
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
                         <h3>Introduction</h3>
                         <p>
                           AWS <em>Route 53 </em>service has a relatively new
@@ -37,34 +32,33 @@
                         <p>
                           You can design easily both simple and sophisticated
                           routing policies, using a flowchart GUI. In addition,
-                          under each "traffic policy" that you
-                          create, there is a built-in versioning mechanism,
-                          which helps keeping track of changes done to each
-                          traffic policy.
+                          under each "traffic policy" that you create, there is
+                          a built-in versioning mechanism, which helps keeping
+                          track of changes done to each traffic policy.
                         </p>
                         <p>
                           Although this service is meant to be implemented in a
-                          wide range of scenarios, in this post I'll
-                          explain how<em> traffic management service</em> can be
-                          used for A/B or A/B/N testing of a website.
+                          wide range of scenarios, in this post I'll explain
+                          how<em> traffic management service</em> can be used
+                          for A/B or A/B/N testing of a website.
                         </p>
                         <p>
                           Although many tools let you test A/B changes to a
                           website within the same hosting instance, for sake of
-                          simplicity I'd suggest using a different
-                          instance for each change you want to test (e.g.
-                          replicating the website to more than one instance, so
-                          each instance has one version of the website). This
-                          way, we can just associate each policy to a specific
-                          endpoint (e.g. IP address of each instance).
+                          simplicity I'd suggest using a different instance for
+                          each change you want to test (e.g. replicating the
+                          website to more than one instance, so each instance
+                          has one version of the website). This way, we can just
+                          associate each policy to a specific endpoint (e.g. IP
+                          address of each instance).
                         </p>
                         <p>
                           In addition, a good practice that can be implemented
                           under traffic management service, is predefining
                           different routing policies, with a dummy IP address as
                           endpoint and saving those policies as templates, and
-                          then just updating the templates' endpoints once
-                          you launch new instances containing specific changes.
+                          then just updating the templates' endpoints once you
+                          launch new instances containing specific changes.
                         </p>
                         <p>
                           Following those guidelines, I'll setup several
@@ -72,21 +66,18 @@
                         </p>
                         <h3>Getting started</h3>
                         <p>
-                          First of all, in order to add a "traffic
-                          policy", you must first define a
-                          <strong>hosted zone</strong> under
-                          Route53. The traffic policies that you will create
-                          will be added to the routing table as
-                          <strong>Record Sets</strong>. Usually
-                          you'll add "A" records (e.g.
-                          "alias" records).
+                          First of all, in order to add a "traffic policy", you
+                          must first define a
+                          <strong>hosted zone</strong> under Route53. The
+                          traffic policies that you will create will be added to
+                          the routing table as <strong>Record Sets</strong>.
+                          Usually you'll add "A" records (e.g. "alias" records).
                         </p>
                         <p>
                           In order to access the traffic management service,
                           open Route53 service from AWS management console, and
-                          choose "traffic policies". Then click on
-                          "Create traffic policy" to open the
-                          editor.
+                          choose "traffic policies". Then click on "Create
+                          traffic policy" to open the editor.
                         </p>
                         <p>
                           If this is the first time you access the service,
@@ -94,19 +85,17 @@
                         </p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div class="et_pb_module et_pb_image et_pb_image_0">
-                      <span class="et_pb_image_wrap ">
+
+                    <div>
+                      <span>
                         <img
                           src="../assets/traffic_policy-dashboard.png"
                           alt=""
                           title=""
                       /></span>
                     </div>
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+                    <div>
+                      <div>
                         <p>Otherwise, you should see the next screen:</p>
                         <p>
                           <img
@@ -119,37 +108,34 @@
                         </p>
                         <h3></h3>
                         <h3>
-                          Scenario 1 - Single location test (weights
-                          policy only)
+                          Scenario 1 - Single location test (weights policy
+                          only)
                         </h3>
                         <p>
                           The first scenario that can be defined is a simple
                           one: testing a single change between two versions of a
                           website, routing traffic according to weights, for
-                          example 50/50, 20/80, etc. In this scenario, we
-                          don't care about the geographic segmentation,
-                          just want to measure if there is a significant
-                          difference between versions.
+                          example 50/50, 20/80, etc. In this scenario, we don't
+                          care about the geographic segmentation, just want to
+                          measure if there is a significant difference between
+                          versions.
                         </p>
                         <p>
-                          The routing rule we'll chose is "Weighted
-                          rule":
+                          The routing rule we'll chose is "Weighted rule":
                         </p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div class="et_pb_module et_pb_image et_pb_image_1">
-                      <span class="et_pb_image_wrap "
+
+                    <div>
+                      <span
                         ><img
                           src="../assets/creating_first_rule.png"
                           alt=""
                           title=""
                       /></span>
                     </div>
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+                    <div>
+                      <div>
                         <p>
                           And the split will look as follow: We chose the
                           specific weights (for example 50/50) and the endpoint
@@ -179,8 +165,8 @@
                           significant different between different geographic
                           locations. For example, we might want to test if users
                           from Sweden behave the same way as the rest of the
-                          world (Note that "Location – Default" will
-                          route users from the rest of the world).
+                          world (Note that "Location – Default" will route users
+                          from the rest of the world).
                         </p>
                         <p>
                           <img
@@ -198,9 +184,8 @@
                         </p>
                         <p>
                           Note that the first 50% of Swedish traffic is routed
-                          to an "existing endpoint" (e.g. to the
-                          baseline site) and just the second one is routed to a
-                          new endpoint.
+                          to an "existing endpoint" (e.g. to the baseline site)
+                          and just the second one is routed to a new endpoint.
                         </p>
                         <p>
                           <img
@@ -222,10 +207,9 @@
                           all at once, and compare within each location if there
                           is a significant difference, you can use the following
                           scenario: First choose the
-                          <strong>"Geolocation rule"</strong> and
-                          add as many locations as desired. Then, chose the
-                          first location and add a
-                          <strong>"Weighted rule"</strong> with the
+                          <strong>"Geolocation rule"</strong> and add as many
+                          locations as desired. Then, chose the first location
+                          and add a <strong>"Weighted rule"</strong> with the
                           desired weights and endpoints associated to each
                           tested weight. Finally, for the rest of the
                           geographical locations, just chose "connect to
@@ -248,8 +232,7 @@
                         </p>
                         <p>
                           Once the traffic policies are created, you can either
-                          keep them idle or connect them to a "policy
-                          record".
+                          keep them idle or connect them to a "policy record".
                         </p>
                         <p>
                           Please note that managing policy records is not for
@@ -277,34 +260,31 @@
                           />
                         </p>
                         <p>
-                          Once the status of the policy record is
-                          "Applied", you can just switch to the
-                          "hosted zone" and make sure a new record
-                          set was added:
+                          Once the status of the policy record is "Applied", you
+                          can just switch to the "hosted zone" and make sure a
+                          new record set was added:
                         </p>
                         <p>&nbsp;</p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div class="et_pb_module et_pb_image et_pb_image_2">
-                      <span class="et_pb_image_wrap "
+
+                    <div>
+                      <span
                         ><img src="../assets/policy_record1.png" alt="" title=""
                       /></span>
                     </div>
-                    <div class="et_pb_module et_pb_image et_pb_image_3">
-                      <span class="et_pb_image_wrap "
+                    <div class="  et_pb_image_3">
+                      <span
                         ><img src="../assets/policy_record2.png" alt="" title=""
                       /></span>
                     </div>
-                    <div class="et_pb_module et_pb_image et_pb_image_4">
-                      <span class="et_pb_image_wrap "
+                    <div class="  et_pb_image_4">
+                      <span
                         ><img src="../assets/policy_record3.png" alt="" title=""
                       /></span>
                     </div>
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner">
+                    <div>
+                      <div>
                         <h3>A final note</h3>
                         <p>
                           Since this tool is used for routing traffic, you might
@@ -321,16 +301,10 @@
                         <p>Happy A/B testing!</p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div
-                      class="et_pb_module et_pb_divider_0 et_pb_space et_pb_divider_hidden"
-                    >
-                      <div class="et_pb_divider_internal"></div>
-                    </div>
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner" id="ref1">
+
+                    <div></div>
+                    <div>
+                      <div id="ref1">
                         <p>
                           [1] Refer to<a
                             href="https://aws.amazon.com/about-aws/whats-new/2015/12/announcing-amazon-route-53-traffic-flow-global-traffic-management-in-the-cloud/"
@@ -341,51 +315,22 @@
                         </p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
-                    <div
-                      class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light"
-                    >
-                      <div class="et_pb_text_inner"></div>
-                    </div>
-                    <!-- .et_pb_text -->
-                  </div>
-                  <!-- .et_pb_column -->
-                </div>
-                <!-- .et_pb_row -->
-              </div>
-              <!-- .et_pb_section -->
-            </div>
-            <!-- .et_builder_inner_content -->
-          </div>
-          <!-- .et-l -->
-        </div>
-        <!-- #et-boc -->
-      </div>
-      <!-- .entry-content -->
-      <div class="et_post_meta_wrapper">
-        <div class="et-single-post-ad">
-          <!-- temp_ad -->
-          <ins
-            class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-8779196571653674"
-            data-ad-slot="3664399547"
-            data-ad-format="auto"
-          ></ins>
-        </div>
-        <!-- .et-single-post-ad --><!-- You can start editing here. -->
 
-        <section id="comment-wrap">
-          <div id="comment-section" class="nocomments">
-            <!-- If comments are open, but there are no comments. -->
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div id="respond" class="comment-respond"></div>
-          <!-- #respond -->
+        </div>
+      </div>
+      <div>
+        <section>
+          <div></div>
+          <div></div>
         </section>
       </div>
-      <!-- .et_post_meta_wrapper -->
     </article>
-    <!-- .et_pb_post -->
   </div>
 </template>
 

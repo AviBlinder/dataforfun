@@ -2,22 +2,22 @@
   <div>
     <article
       id="post-609"
-      class="post-609 page type-page status-publish hentry"
+      class="post-609 page type-page status-publish "
     >
       <div class="entry-content">
-        <div id="et-boc" class="et-boc">
-          <div class="et-l et-l--post">
-            <div class="et_builder_inner_content et_pb_gutters3">
+        <div id="" >
+          <div >
+            <div >
               <div
-                class="et_pb_section et_pb_section_0 et_pb_fullwidth_section et_section_regular"
+                class="   "
               >
                 <section
-                  class="et_pb_module et_pb_fullwidth_header et_pb_fullwidth_header_0 et_hover_enabled et_pb_text_align_left et_pb_bg_layout_light"
+                  class="   et_hover_enabled  "
                 >
-                  <div class="et_pb_fullwidth_header_container left">
-                    <div class="header-content-container center">
-                      <div class="header-content">
-                        <div class="et_pb_header_content_wrapper">
+                  <div class=" left">
+                    <div class=" center">
+                      <div class="">
+                        <div class="">
                           <h1>
                             Forecasting Time Series by Selecting the Most
                             Suitable Model
@@ -30,12 +30,12 @@
                   <div class="et_pb_fullwidth_header_scroll"></div>
                 </section>
                 <section
-                  class="et_pb_module et_pb_fullwidth_header et_pb_fullwidth_header_1 et_hover_enabled et_pb_text_align_left et_pb_bg_layout_light"
+                  class="  et_pb_fullwidth_header_1 et_hover_enabled  "
                 >
-                  <div class="et_pb_fullwidth_header_container left">
-                    <div class="header-content-container center">
-                      <div class="header-content">
-                        <div class="et_pb_header_content_wrapper">
+                  <div class=" left">
+                    <div class=" center">
+                      <div class="">
+                        <div class="">
                           <h3>
                             If you need to forecast sales, budget or any other
                             related figures, feel free using this widget, which
@@ -58,15 +58,15 @@
                   </div>
                 </section>
               </div>
-              <!-- .et_pb_section -->
-              <div class="et_pb_section et_pb_section_1 et_section_regular">
-                <div class="et_pb_row et_pb_row_0">
+              
+              <div class=" et_pb_section_1 ">
+                <div >
                   <div
-                    class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child"
+                    
                   >
-                    <div class="et_pb_module et_pb_accordion et_pb_accordion_0">
+                    <div class=" et_pb_accordion et_pb_accordion_0">
                       <div
-                        class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_0  et_pb_toggle_open"
+                        class="et_pb_toggle  et_pb_accordion_item et_pb_accordion_item_0  et_pb_toggle_open"
                       >
                         <h5 class="et_pb_toggle_title">Why Time Series</h5>
                         <div class="et_pb_toggle_content clearfix">
@@ -100,7 +100,7 @@
                       </div>
                       <!-- .et_pb_toggle -->
                       <div
-                        class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_1  et_pb_toggle_close"
+                        class="et_pb_toggle  et_pb_accordion_item et_pb_accordion_item_1  et_pb_toggle_close"
                       >
                         <h5 class="et_pb_toggle_title">
                           Forecasting Time Series
@@ -109,7 +109,7 @@
                           <p>
                             Time series models implemented by this utility
                             execute a wide range of models, from
-                            &#8220;naive&#8221; ones thru exponential smoothing
+                            'naive' ones thru exponential smoothing
                             and ARIMA models.
                           </p>
                         </div>
@@ -117,7 +117,7 @@
                       </div>
                       <!-- .et_pb_toggle -->
                       <div
-                        class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_2  et_pb_toggle_close"
+                        class="et_pb_toggle  et_pb_accordion_item et_pb_accordion_item_2  et_pb_toggle_close"
                       >
                         <h5 class="et_pb_toggle_title">
                           How to use this widget
@@ -147,18 +147,18 @@
                     </div>
                     <!-- .et_pb_accordion -->
                   </div>
-                  <!-- .et_pb_column -->
+                  
                 </div>
-                <!-- .et_pb_row -->
+                
               </div>
-              <!-- .et_pb_section -->
+              
               <div
-                class="et_pb_section et_pb_section_2 et_pb_fullwidth_section et_section_regular"
+                class=" et_pb_section_2  "
               >
                 <div
-                  class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_0"
+                  class=" et_pb_fullwidth_code et_pb_fullwidth_code_0"
                 >
-                  <div class="et_pb_code_inner">
+                  <div >
                     <iframe
                       style="border: none; width: 1600px; height: 900px;"
                       src="https://aviblinder.shinyapps.io/tsselect_app-nondynamicoutput/"
@@ -169,16 +169,16 @@
                 </div>
                 <!-- .et_pb_fullwidth_code -->
               </div>
-              <!-- .et_pb_section -->
-              <div class="et_pb_section et_pb_section_3 et_section_regular">
-                <div class="et_pb_row et_pb_row_1">
+              
+              <div class=" et_pb_section_3 ">
+                <div class=" et_pb_row_1">
                   <div
-                    class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child"
+                    class=" et_pb_column_1   "
                   >
                     <div
-                      class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light"
+                      
                     >
-                      <div class="et_pb_text_inner">
+                      <div >
                         <p>
                           In case you want to use a dynamic output plot, use
                           <span style="color: #000000;"
@@ -193,31 +193,31 @@
                         </p>
                         <p>
                           Please bear in mind that the initial load of this
-                          application takes a few seconds&#8230;
+                          application takes a few seconds...
                         </p>
                       </div>
                     </div>
-                    <!-- .et_pb_text -->
+                    
                   </div>
-                  <!-- .et_pb_column -->
+                  
                 </div>
-                <!-- .et_pb_row -->
+                
               </div>
-              <!-- .et_pb_section -->
+              
               <div
-                class="et_pb_section et_pb_section_4 et_pb_fullwidth_section et_section_regular"
+                class=" et_pb_section_4  "
               ></div>
-              <!-- .et_pb_section -->
+              
             </div>
-            <!-- .et_builder_inner_content -->
+            
           </div>
-          <!-- .et-l -->
+          <!-- .-->
         </div>
-        <!-- #et-boc -->
+        <!-- # -->
       </div>
       <!-- .entry-content -->
     </article>
-    <!-- .et_pb_post -->
+    
   </div>
 </template>
 

@@ -1,10 +1,9 @@
 <template>
   <div>
-    <article
-      id="post-1093"
-      class="et_pb_post post-1093 post type-post status-publish format-standard hentry category-data_science_topics"
+    <article id="post-1093" 
+    
     >
-      <div class="et_post_meta_wrapper">
+      <div>
         <h1 class="entry-title">
           Kickstarter &#8211; Before you launch a new project, check success
           rates
@@ -18,10 +17,10 @@
           projects?
         </p>
         <p>
-          Well, it depends on the field&#8230;For example if you have a
-          <em>Crafts</em> project, you have almost 17% of failure
-          chance&#8230;On the other hand, if you have a
-          <em>dancing </em>project, your success rate are around 93%!
+          Well, it depends on the field...For example if you have a
+          <em>Crafts</em> project, you have almost 17% of failure chance...On
+          the other hand, if you have a <em>dancing </em>project, your success
+          rate are around 93%!
         </p>
         <p>
           Click the following link in order to get the dashboard showing all the
@@ -37,12 +36,11 @@
       </div>
       <!-- .entry-content -->
     </article>
-    <!-- .et_pb_post -->
   </div>
 </template>
 
 <script>
-  export default {};
+export default {};
 </script>
 
 <style scoped></style>
