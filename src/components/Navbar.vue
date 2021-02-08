@@ -4,9 +4,12 @@
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
-                          <img src="../assets/DataForFun_Logo.png" alt="DFF Logo" 
-                          width="50" >
-                              
+                          <img src="../assets/DataForFun_Logo.png" 
+                          alt="DFF Logo" 
+                          width="50" 
+                          style="border-radius: 50%;"
+                          class="mx-2 my-2"
+                          >    
                             <span class="navbar-burger" 
                             @click="showNav = !showNav" :class="{ 'is-active': showNav }"
                             data-target="navbarMenu"

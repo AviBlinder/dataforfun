@@ -1,5 +1,11 @@
 # dataforfun
 
+## Git add-commit-push:
+```
+npm run git:commit --comment="test script"
+
+```
+
 ## Project setup
 ```
 npm install
