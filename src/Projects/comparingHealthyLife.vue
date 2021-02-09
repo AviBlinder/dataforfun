@@ -7,10 +7,10 @@
             <div>
               <div class="   ">
                 <section class="    ">
-                  <div class="left">
-                    <div class="center">
+                  <div >
+                    <div >
                       <div class="">
-                        <h1 class="">
+                        <h1 class="has-text-centered tite">
                           Comparing Healthy Life Expectancy and Retirement Ages
                           Worldwide
                         </h1>

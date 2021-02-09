@@ -95,7 +95,7 @@ vcounts<span style="color: #080;">;</span>ecounts
 <p><div class="simplePullQuote right"><p>The diameter of a graph is the length of the longest shortest-path</p>
 </div></p>
 
-<div class="wp_codebox_msgheader wp_codebox_hide"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span class="left"><a href="javascript:;" onclick="javascript:showCodeTxt('p391code4'); return false;">View Code</a> RSPLUS</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3914"><td class="code" id="p391code4"><pre class="rsplus" style="font-family:monospace;">diameter<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span>
+<div class="wp_codebox_msgheader wp_codebox_hide"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span ><a href="javascript:;" onclick="javascript:showCodeTxt('p391code4'); return false;">View Code</a> RSPLUS</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3914"><td class="code" id="p391code4"><pre class="rsplus" style="font-family:monospace;">diameter<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span>
 <span style="color: #ff0000;">9</span></pre></td></tr></table></div>
 
 <p>In our case, the largest shortest-path between two users is 9, meaning that at the maximum, we need 7 additional connected friends in order to connect between two users.</p>
