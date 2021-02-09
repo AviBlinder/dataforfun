@@ -1,5 +1,17 @@
-# dataforfun
-
+<span style="text-align: center;">
+<h3>
+Dataforfun
+</h3>
+</span>
+<span style="color: blue">
+<h5> To Do: </h5>
+<ul>
+<li>Review Bulma </li>
+<li>Style posts/projects </li>
+<li>Design overall site's style </li>
+<li>Add Google Ads / Google Analytics </li>
+</ul>
+</span>
 ## Git add-commit-push:
 ```
 npm run git:commit --comment="test script"
