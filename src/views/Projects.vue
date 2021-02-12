@@ -8,7 +8,7 @@
           <div class="column is-4-tablet is-3-desktop">
             <div class="card">
               <div class="card-image has-text-centered px-3 py-3">
-                <img src="../assets/fishing-net-1526496__180.jpg" 
+                <img src="../assets/easter-1238465__340-400x284.jpg" 
                 alt="Sentiment Analysis" />
               </div>
               <div class="card-content">
@@ -53,7 +53,7 @@
           <div class="column is-4-tablet is-3-desktop">
             <div class="card">
               <div class="card-image has-text-centered px-3 py-3">
-                <img src="../assets/easter-1238465__340-400x284.jpg" 
+                <img src="../assets/fishing-net-1526496__180.jpg" 
                 alt="Sentiment Analysis" />
               </div>
               <div class="card-content">
