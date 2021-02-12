@@ -4,7 +4,7 @@
   >
 
 				
-					<div class="entry-content">
+					<div >
 					<div id="" >
 			
     		<div>
@@ -170,7 +170,7 @@ However, although the top 2 users are both the most 'friendly' ones and the most
 	
 			
 		</div><!-- # -->
-							</div> <!-- .entry-content -->
+							</div> <!-- . -->
 
 				
 				

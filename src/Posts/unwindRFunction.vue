@@ -1,5 +1,15 @@
 <template>
   <div>
+        <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+              <posts-side-bar> </posts-side-bar>
+        </div>
+        
+
+        <div class="column is-7">
+
     <article>
       <div>
         <h1 class="is-size-3 has-text-centered mb-4">'unwind' R function</h1>
@@ -16,7 +26,7 @@
         </p> -->
       </div>
 
-      <div class="entry-content">
+      <div >
         <div id="">
           <div>
             <div>
@@ -79,13 +89,24 @@
         </div>
         <!-- # -->
       </div>
-      <!-- .entry-content -->
+      <!-- . -->
     </article>
+        </div>
+        </div>
+      </div>
+        </section>
+
   </div>
 </template>
 
 <script>
-export default {};
+import postsSideBar from '@/components/postsSideBar'
+  export default {
+    
+    components: {
+      postsSideBar
+    }
+  };
 </script>
 
 <style scoped></style>

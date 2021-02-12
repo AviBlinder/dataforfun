@@ -9,6 +9,9 @@
       </div>
         </div>
      </section>
+         <router-view> </router-view>
+
+        
       </div>
 </template>
 

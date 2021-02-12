@@ -4,7 +4,10 @@
       <div class="card-image is-flex is-horizontal-center ">
        
         <figure class='image '>
-           <img :src="cardcontent.image" :alt="cardcontent.title" />
+           <img :src="cardcontent.image" 
+           :alt="cardcontent.title"
+           style="width:100%"
+            />
         </figure>
 
       </div>

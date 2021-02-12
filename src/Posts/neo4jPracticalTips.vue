@@ -1,8 +1,18 @@
 <template>
   <div>
+        <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+              <posts-side-bar> </posts-side-bar>
+        </div>
+        
+
+        <div class="column is-7">
+
     <article id="post-475">
       <div>
-        <h1 class="entry-title">Working with NEO4J – Some practical tips</h1>
+        <h1 >Working with NEO4J – Some practical tips</h1>
 
         <p class="post-meta">
           <span class="published">Oct 28, 2016</span> |
@@ -29,7 +39,7 @@
       </div>
       <!-- .et_post_meta_wrapper -->
 
-      <div class="entry-content">
+      <div >
         <div id="">
           <div>
             <div>
@@ -255,7 +265,7 @@
         </div>
         <!-- # -->
       </div>
-      <!-- .entry-content -->
+      <!-- . -->
       <div>
         <section>
           <div>
@@ -265,11 +275,21 @@
       </div>
       <!-- .et_post_meta_wrapper -->
     </article>
+        </div>
+        </div>
+      </div>
+        </section>
   </div>
 </template>
 
 <script>
-export default {};
+import postsSideBar from '@/components/postsSideBar'
+  export default {
+    
+    components: {
+      postsSideBar
+    }
+  };
 </script>
 
 <style scoped></style>

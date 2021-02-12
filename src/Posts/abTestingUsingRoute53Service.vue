@@ -1,22 +1,28 @@
 <template>
   <div>
-    <h1>AB Testing</h1>
+    <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+              <posts-side-bar> </posts-side-bar>
+        </div>
+        
 
-    <article class=" post-959 post      ">
+        <div class="column is-7">
+
+    <article>
+            <h1 class="title has-text-centered">AB Testing</h1>
       <div>
-        <h1 class="entry-title">A\B testing with Route53 (An AWS Service)</h1>
+        <h3 class="subtitle has-text-centered">A\B testing with Route53 (An AWS Service)</h3>
       </div>
 
-      <div class="entry-content">
-        <div id="">
-          <div>
-            <div>
-              <div>
-                <div>
                   <div>
                     <div>
                       <div>
-                        <h3>Introduction</h3>
+                        <h3 class="subtitle has-text-centered my-4 mx-4">Introduction</h3>
+
+                        <div class="block">
+
                         <p>
                           AWS <em>Route 53 </em>service has a relatively new
                           feature (announced by December 2015) called
@@ -36,6 +42,9 @@
                           a built-in versioning mechanism, which helps keeping
                           track of changes done to each traffic policy.
                         </p>
+                         </div>
+
+                        <div class="block">
                         <p>
                           Although this service is meant to be implemented in a
                           wide range of scenarios, in this post I'll explain
@@ -52,6 +61,9 @@
                           associate each policy to a specific endpoint (e.g. IP
                           address of each instance).
                         </p>
+                        </div>
+
+<div class="block">
                         <p>
                           In addition, a good practice that can be implemented
                           under traffic management service, is predefining
@@ -64,7 +76,11 @@
                           Following those guidelines, I'll setup several
                           templates for different A/B or A/B/N scenarios.
                         </p>
-                        <h3>Getting started</h3>
+
+</div>
+                        <h3 class="subtitle has-text-centered">Getting started</h3>
+
+                        <div class="block">
                         <p>
                           First of all, in order to add a "traffic policy", you
                           must first define a
@@ -73,6 +89,7 @@
                           the routing table as <strong>Record Sets</strong>.
                           Usually you'll add "A" records (e.g. "alias" records).
                         </p>
+                        </div>
                         <p>
                           In order to access the traffic management service,
                           open Route53 service from AWS management console, and
@@ -106,11 +123,12 @@
                             height="369"
                           />
                         </p>
-                        <h3></h3>
-                        <h3>
+                        <h3 class="subtitle has-text-centered my-4">
                           Scenario 1 - Single location test (weights policy
                           only)
                         </h3>
+
+                        <div class="block mt-3">
                         <p>
                           The first scenario that can be defined is a simple
                           one: testing a single change between two versions of a
@@ -120,9 +138,12 @@
                           measure if there is a significant difference between
                           versions.
                         </p>
+                        </div>
+                        <div class="block">
                         <p>
                           The routing rule we'll chose is "Weighted rule":
                         </p>
+                        </div>
                       </div>
                     </div>
 
@@ -135,7 +156,7 @@
                       /></span>
                     </div>
                     <div>
-                      <div>
+                      <div class="block">
                         <p>
                           And the split will look as follow: We chose the
                           specific weights (for example 50/50) and the endpoint
@@ -150,16 +171,19 @@
                             height="659"
                           />
                         </p>
+                        <div class="block">
                         <p>
                           As mentioned earlier, we can just create a template,
                           with both IP values pointing to the same host instance
                           or a dummy IP, and once we launch the test and have a
                           new IP address, we can just modify the template.
                         </p>
-                        <h3>
+                        </div>
+                        <h3 class="subtitle has-text-centered">
                           Scenario 2 – Two locations tested at once – same type
                           of A/B test
                         </h3>
+                        <div class="block">                      
                         <p>
                           In this scenario, we want to test if there is a
                           significant different between different geographic
@@ -168,7 +192,7 @@
                           world (Note that "Location – Default" will route users
                           from the rest of the world).
                         </p>
-                        <p>
+                        <p class="my-3"> 
                           <img
                             class="alignleft size-full wp-image-965"
                             src="../assets/scenario2.png"
@@ -182,12 +206,14 @@
                           routing policies in such a way that we route 50% of
                           Swedish traffic to site A and 50% to site B.
                         </p>
+                        </div>
+                        <div class="block">                       
                         <p>
                           Note that the first 50% of Swedish traffic is routed
                           to an "existing endpoint" (e.g. to the baseline site)
                           and just the second one is routed to a new endpoint.
                         </p>
-                        <p>
+                        <p class="my-3">
                           <img
                             class="alignleft size-full wp-image-966"
                             src="../assets/scenario2_b.png"
@@ -196,12 +222,12 @@
                             height="734"
                           />
                         </p>
-                        <h3></h3>
-                        <h3></h3>
-                        <h3>
+                        </div>
+                        <h3 class="subtitle has-text-centered my-3">
                           Scenario 3 – Several locations tested at once –
                           different A/B test for each location.
                         </h3>
+                        <div class="block">
                         <p>
                           In case you want to test many geographical locations
                           all at once, and compare within each location if there
@@ -215,7 +241,8 @@
                           geographical locations, just chose "connect to
                           existing rule"
                         </p>
-                        <p>
+                        </div>
+                        <p class="my-3"> 
                           <img
                             class="alignleft size-full wp-image-967"
                             src="../assets/scenario3.png"
@@ -224,17 +251,18 @@
                             height="715"
                           />
                         </p>
-                        <h3></h3>
-                        <h3>Scenario 4 – ABN Testing</h3>
-                        <p>
+                        <h3 class="subtitle has-text-centered my-3"> Scenario 4 – ABN Testing</h3>
+
+
+                        <p class="block">
                           Goes without saying that A/B tests can be converted
                           into A/B/N tests implementing similar guidelines.
                         </p>
-                        <p>
+                        <p class="block">
                           Once the traffic policies are created, you can either
                           keep them idle or connect them to a "policy record".
                         </p>
-                        <p>
+                        <p class="block">
                           Please note that managing policy records is not for
                           free and
                           <strong
@@ -244,13 +272,13 @@
                           (this monthly price is prorated for partial usage
                           during each month).
                         </p>
-                        <p>
+                        <p class="block">
                           Also, you can associate different versions of a
                           traffic policy with different hosted zones. You just
                           need to make sure that the specific record set is not
                           already defined in your hosted zone routing table!
                         </p>
-                        <p>
+                        <p class="block">
                           <img
                             class="alignleft size-full wp-image-961"
                             src="../assets/policy_record1.png"
@@ -259,7 +287,7 @@
                             height="455"
                           />
                         </p>
-                        <p>
+                        <p class="block">
                           Once the status of the policy record is "Applied", you
                           can just switch to the "hosted zone" and make sure a
                           new record set was added:
@@ -285,7 +313,9 @@
                     </div>
                     <div>
                       <div>
-                        <h3>A final note</h3>
+                        <h3 class="subtitle has-text-centered my-3">A final note</h3>
+
+                        <div class="block">
                         <p>
                           Since this tool is used for routing traffic, you might
                           want to get a deeper understanding of the traffic
@@ -298,12 +328,12 @@
                           execute statistic tests in order to understand if your
                           changes are meaningful or not.
                         </p>
-                        <p>Happy A/B testing!</p>
+                        </div>
+                        <p class="block">Happy A/B testing!</p>
                       </div>
                     </div>
 
-                    <div></div>
-                    <div>
+                    <div class="block my-3">
                       <div id="ref1">
                         <p>
                           [1] Refer to<a
@@ -316,25 +346,27 @@
                       </div>
                     </div>
 
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <section>
-          <div></div>
-          <div></div>
-        </section>
+                    <div>
+                      
+                    </div>
+              
       </div>
     </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
 <script>
-  export default {};
+import postsSideBar from '@/components/postsSideBar'
+  export default {
+    
+    components: {
+      postsSideBar
+    }
+  };
 </script>
 <style scoped></style>

@@ -1,14 +1,24 @@
 <template>
   <div>
+        <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+              <posts-side-bar> </posts-side-bar>
+        </div>
+        
+
+        <div class="column is-7">
+
 	<article id="post-988" 
   >
 											<div >
-							<h1 class="entry-title">Comparing Distributed Computing on AWS Big Data Services</h1>
+							<h1 >Comparing Distributed Computing on AWS Big Data Services</h1>
 
 						<p class="post-meta"><span class="published">Mar 12, 2017</span> | <a href="http://www.dataforfun.com/category/aws/" rel="category tag">AWS</a>, <a href="http://www.dataforfun.com/category/data-analysis/" rel="category tag">Data Analysis</a>, <a href="http://www.dataforfun.com/category/data_science_topics/" rel="category tag">Data Science</a>, <a href="http://www.dataforfun.com/category/dynamodb/" rel="category tag">DynamoDB</a>, <a href="http://www.dataforfun.com/category/emr/" rel="category tag">EMR</a>, <a href="http://www.dataforfun.com/category/kinesis/" rel="category tag">Kinesis</a>, <a href="http://www.dataforfun.com/category/redshift/" rel="category tag">Redshift</a> | <span class="comments-number"><a href="http://www.dataforfun.com/aws-comparing-distributed-computing/#respond">0 comments</a></span></p>
 												</div> 
 				
-					<div class="entry-content">
+					<div >
 					<div id="" >
 			
 		<div >
@@ -246,14 +256,24 @@
 	
 			
 		</div><!-- # -->
-							</div> <!-- .entry-content -->
+							</div> <!-- . -->
 					
 				</article> 
+        </div>
+        </div>
+      </div>
+        </section>
   </div>
 </template>
 
 <script>
-export default {};
+import postsSideBar from '@/components/postsSideBar'
+  export default {
+    
+    components: {
+      postsSideBar
+    }
+  };
 </script>
 
 <style scoped>

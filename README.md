@@ -6,7 +6,6 @@ Dataforfun
 <span style="color: blue">
 <h5> To Do: </h5>
 <ul>
-<li>Review Bulma </li>
 <li>Style posts/projects </li>
 <li>Design overall site's style </li>
 <li>Add Google Ads / Google Analytics </li>

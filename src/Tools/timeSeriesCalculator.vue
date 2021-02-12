@@ -4,7 +4,7 @@
       id="post-609"
       class="post-609 page type-page status-publish "
     >
-      <div class="entry-content">
+      <div >
         <div id="" >
           <div >
             <div >
@@ -215,7 +215,7 @@
         </div>
         <!-- # -->
       </div>
-      <!-- .entry-content -->
+      <!-- . -->
     </article>
     
   </div>

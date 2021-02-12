@@ -1,12 +1,22 @@
 <template>
   <div>
+        <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+              <posts-side-bar> </posts-side-bar>
+        </div>
+        
+
+        <div class="column is-7">
+
     <article id="post-921">
       <div>
-        <h1 class="entry-title">Setting up a fully managed website in AWS</h1>
+        <h1 >Setting up a fully managed website in AWS</h1>
       </div>
       <!-- .et_post_meta_wrapper -->
 
-      <div class="entry-content">
+      <div >
         <div id="">
           <div>
             <div>
@@ -312,15 +322,25 @@
         </div>
         <!-- # -->
       </div>
-      <!-- .entry-content -->
+      <!-- . -->
       <div></div>
       <!-- .et_post_meta_wrapper -->
     </article>
+        </div>
+        </div>
+      </div>
+        </section>
   </div>
 </template>
 
 <script>
-export default {};
+import postsSideBar from '@/components/postsSideBar'
+  export default {
+    
+    components: {
+      postsSideBar
+    }
+  };
 </script>
 
 <style scoped></style>

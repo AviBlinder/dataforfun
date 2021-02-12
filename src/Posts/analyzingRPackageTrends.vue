@@ -1,12 +1,21 @@
 <template>
-  <article id="post-656">
+    <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+              <posts-side-bar> </posts-side-bar>
+        </div>
+        
+
+        <div class="column is-7">
+  <article >
     <div>
-      <h1 class="entry-title">
+      <h1 >
         Analyzing R package trends and adoption of new technologies by the R
         community
       </h1>
     </div>
-    <div class="entry-content">
+    <div >
       <div id="">
         <div>
           <div>
@@ -382,10 +391,21 @@
       </div>
     </div>
   </article>
+        </div>
+        </div>
+      </div>
+    </section>
+  
 </template>
 
 <script>
-  export default {};
+import postsSideBar from '@/components/postsSideBar'
+  export default {
+    
+    components: {
+      postsSideBar
+    }
+  };
 </script>
 
 <style scoped></style>
