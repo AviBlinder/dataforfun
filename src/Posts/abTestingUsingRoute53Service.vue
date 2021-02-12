@@ -4,7 +4,7 @@
       <div class="container">
         <div class="mt-5 columns is-4">
         <div class="column is-3 is-hidden-mobile is-vcentered">
-              <posts-side-bar> </posts-side-bar>
+              <posts-side-bar :currentPost="post_id"> </posts-side-bar>
         </div>
         
 
@@ -366,7 +366,13 @@ import postsSideBar from '@/components/postsSideBar'
     
     components: {
       postsSideBar
+    },
+  data(){
+    return{
+      post_id: 3
     }
+  }
+
   };
 </script>
 <style scoped></style>

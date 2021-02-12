@@ -1,9 +1,15 @@
 <template>
   <div>
-    <article
-      id="post-609"
-      class="post-609 page type-page status-publish "
-    >
+        <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+        </div>
+        
+
+        <div class="column is-7">
+
+    <article>
       <div >
         <div id="" >
           <div >
@@ -217,7 +223,11 @@
       </div>
       <!-- . -->
     </article>
-    
+        </div>
+        </div>
+      </div>
+        </section>
+
   </div>
 </template>
 

@@ -1,5 +1,14 @@
 <template>
   <div>
+        <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+          <projects-side-bar :currentProject="project_id"> </projects-side-bar>
+        </div>       
+
+        <div class="column is-7">
+
     <article id="post-398">
       <div class="section">
         <div class="container">
@@ -173,10 +182,27 @@
         </div>
       </div>
     </article>
+        </div>
+        </div>
+      </div>
+        </section>
   </div>
 </template>
 <script>
-export default {};
+import projectsSideBar from '@/components/projectsSideBar'
+
+export default {
+components: {
+  projectsSideBar
+  },
+  data(){
+    return{
+      project_id: 3
+    }
+  }
+
+};
+
 </script>
 
 <style scoped></style>

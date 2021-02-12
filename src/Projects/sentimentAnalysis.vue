@@ -1,6 +1,17 @@
 <template>
   <div>
-    <section>
+    <section class="section">
+      <div class="container">
+        <div class="mt-5 columns is-4">
+        <div class="column is-3 is-hidden-mobile is-vcentered">
+              <projects-side-bar :currentProject="project_id"> </projects-side-bar>
+        </div>
+        
+
+        <div class="column is-7">
+
+      <article>
+
       <div>
         <h2>Classification of Yelp User's reviews</h2>
         <p>&nbsp;</p>
@@ -318,6 +329,27 @@
           cost being less than 80 cents….
         </p>
       </div>
+      </article>
+        </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
+
+<script>
+import projectsSideBar from '@/components/projectsSideBar'
+
+export default {
+components: {
+  projectsSideBar
+  },
+    data(){
+    return{
+      project_id: 2
+    }
+  }
+
+};
+
+</script>
