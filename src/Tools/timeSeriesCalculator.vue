@@ -3,11 +3,11 @@
         <section class="section">
       <div class="container">
         <div class="mt-5 columns is-4">
-        <div class="column is-3 is-hidden-mobile is-vcentered">
-        </div>
-        
+          <div class="column is-1">
+            
+          </div>
 
-        <div class="column is-7">
+        <div class="column is-10">
 
     <article>
       <div >
