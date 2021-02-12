@@ -1,8 +1,22 @@
 <template>
   <div>
 
-<section>
+    <section class="hero  is-fullheight is-fullheight-with-navbar">
+      <!-- has-background-light	 -->
+      <!-- has-background-grey-lighter  -->
+      <div class="hero-body has-background-light">
+        <div class="container  has-text-centered">
+          <h2 class="subtitle is-3 is-capitalized	has-text-link">
+            In a Sea of Data you can just relax and enjoy the journey
+          </h2>
+          <h3 class="subtitle is-4">
+            A blog about Data Science and more...  
+          </h3>
+        </div>
+      </div>
+    </section>
 
+<!-- <section>
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h1 class="title">
@@ -11,7 +25,7 @@
 
                 </div>
             </div>
-</section>
+</section> -->
 
         <div class="box cta">
             <p class="has-text-centered">

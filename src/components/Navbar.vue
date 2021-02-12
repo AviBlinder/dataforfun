@@ -3,7 +3,7 @@
             <div class="hero-head"> -->
               <div>
                 <div>              
-                <nav class="navbar   is-spaced">
+                <nav class="navbar is-fixed-top  is-spaced">
                     <div class="container">
                         <div class="navbar-brand">
                           <img src="../assets/DataForFun_Logo.png" 
@@ -55,19 +55,9 @@
 </template>
 
 <script>
- import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
- import faBook from '@fortawesome/fontawesome-free-solid/faBook'
 
 export default {
   name: 'navbar',
-  components:{
-    'font-awesome-icon' : FontAwesomeIcon 
-  },
-  computed:{
-    icon(){
-        return faBook;
-    }
-  },
   data(){
     return{
         	showNav: false
