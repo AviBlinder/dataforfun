@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <h1>This is the Projects page</h1>
 
    <router-link style="margin-left:1rem" :to="{name: 'sentiment-analysis'}" tag="a">Sentiment Analysis</router-link>      
@@ -8,3 +8,13 @@
     <router-view> </router-view>
   </div>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
+
+<style scoped>
+
+</style>

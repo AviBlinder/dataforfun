@@ -1,0 +1,113 @@
+
+<figure>
+  <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+  <figcaption>Fig.1 - Trulli, Puglia, Italy</figcaption>
+</figure>
+
+
+is-size-1 
+has-text-centered
+is-uppercase / is-lowercase
+is-italic
+title / subtitle
+
+has-text-weight-bold / has-text-weight-light
+
+has-text-primary / has-background-light
+
+    <!-- p=padding y=y direction m=margin -->
+    <h1 class="py-6 my-2">Hello, Bulma</h1>
+    <h1 class="px-4 mx-6 py-4">Hello, Bulma</h1>
+    <h1 class="mt-4 mr-4 pb-6 pl-3">Hello, Bulma</h1>
+
+    <div class="section">
+      <div class="container">
+        <p>
+        </p>
+      </div>
+    </div>  
+
+    <!-- Columns: -->
+    <!-- https://bulma.io/documentation/columns/ -->
+
+    <section class="section is-hidden-mobile">
+
+        <!-- section class=section -> div class=container -> div class=columns -->
+    <section class="section">
+      <div class="container">
+        <!-- is-vcentered = each column is vertically centered -->
+        <div class="columns is-vcentered">
+          <!-- if no is-# is specified, all columns will share the same size -->
+          <!-- column 1 -->
+          <!-- total is=12 so  is-3 = 3 out of 12 -->
+          <div class="column is-3">
+
+            <!-- Single column with offset -->
+            <div class="intro column is-8 is-offset-2">
+
+              <!--  -->
+>
+    <section class="section">
+      <div class="container">
+        <!-- is-multiline allows managing columns that span over 12 grids into new rows -->
+        <div class="columns is-vcentered is-multiline is-centered">
+          <div class="column is-6-tablet is-3-desktop">
+            <h1 class="is-size-3-mobile is-size-1-desktop title">Docker</h1>
+            <h2 class="is-size-3-mobile is-size-2-desktop subtitle">
+
+
+          <div class="column is-6-tablet is-5-desktop has-text-centered">
+          <div class="column is-12-tablet is-4-desktop">
+              
+              <!-- is-one-quarter / is-half ... -->
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Variable gap -->
+        <!-- https://bulma.io/documentation/columns/gap/ -->
+        <!-- You can specify a custom column gap by appending one of 9 modifiers on the
+           .columns container.
+
+            is-0 will remove any gap (similar to is-gapless)
+            is-3 is the default value, equivalent to the 0.75rem value
+            is-8 is the maximum gap of 2rem
+            Additionally, .is-variable should be added on the .columns container.
+            -->
+
+        <!-- is-variable + is-# affects the gap between two columns -->
+        <div class="columns is-variable is-8">
+          <div class="column is-7-tablet">
+            <p>
+
+              <!-- Buttons -->
+                <div class="has-text-centered mt-6">
+                  <button class="button is-primary is-rounded is-size-6">
+                    Add to Cart
+                  </button>
+                </div>
+
+                <div class="has-text-centered">
+                  <button class="button is-danger is-rounded mt-5" id="signup">
+                    Sign Up
+                  </button>
+                </div>
+
+
+                <!-- form -->
+            <form>
+              <div class="has-text-left">
+                <div class="control mb-6 is-size-6">
+                  <!-- select input -->
+                  <div class="select is-dark">
+                    <select>
+                      <option>Small (250g)</option>
+                      <option>Large (500g)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="has-text-centered">
+                <button class="button is-primary">Add to Cart</button>
+              </div>
+            </form>

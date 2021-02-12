@@ -12,12 +12,12 @@
                 class="   "
               >
                 <section
-                  class="   et_hover_enabled  "
+                  class="     "
                 >
                   <div class=" left">
                     <div class=" center">
-                      <div class="">
-                        <div class="">
+                      <div >
+                        <div >
                           <h1>
                             Forecasting Time Series by Selecting the Most
                             Suitable Model
@@ -26,16 +26,16 @@
                       </div>
                     </div>
                   </div>
-                  <div class="et_pb_fullwidth_header_overlay"></div>
-                  <div class="et_pb_fullwidth_header_scroll"></div>
+                  
+                  
                 </section>
                 <section
-                  class="  et_pb_fullwidth_header_1 et_hover_enabled  "
+                  class="  et_pb_fullwidth_header_1   "
                 >
                   <div class=" left">
                     <div class=" center">
-                      <div class="">
-                        <div class="">
+                      <div >
+                        <div >
                           <h3>
                             If you need to forecast sales, budget or any other
                             related figures, feel free using this widget, which
@@ -50,8 +50,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="et_pb_fullwidth_header_overlay"></div>
-                  <div class="et_pb_fullwidth_header_scroll">
+                  
+                  <div >
                     <a href="#" class="scroll-down-container">
                       <span class="scroll-down et-pb-icon">&#x33;</span>
                     </a>

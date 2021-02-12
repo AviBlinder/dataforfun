@@ -7,19 +7,12 @@
 					<div class="entry-content">
 					<div id="" >
 			
-		<div >
-			<div ><div  >
-				
-				
-				
-				
-					<div >
-				<div >
-				
-				
-				<div >
-				
-				
+    		<div>
+		    	<div>
+            <div>
+					    <div>
+				        <div>
+			          	<div>	
 				<div ><h1>Social Network Analysis</h1>
 <h2>Finding the most socially-important user on Yelp dataset</h2>
 <h3><span style="color: #3366ff;">Introduction</span></h3>
@@ -161,7 +154,7 @@ degrees_table$Degree <span style="color: #080;">&lt;-</span> <a href="http://ast
 <h4><span style="color: #3366ff;">Results</span></h4>
 <p>As one might have expected, in low-density networks, users with high number of friends tend to be the more central ones.<br />
 However, although the top 2 users are both the most 'friendly' ones and the most central ones (however, in opposite order), for the other ones, this is not the case: users with lower number of friends are found to be more central, in average, one considering their centrality upon the 36 different networks of the selected restaurants.</p></div>
-			</div> <div ></div><div >
+			</div> <div >
 				
 				
 				<div ><p><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-linkedin nolightbox" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;title=Social%20Network%20Analysis" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/linkedin.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-mail nolightbox" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Social%20Network%20Analysis&#038;body=Hey%2C%20check%20this%20post:%20http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/mail.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;text=Hey%2C%20check%20this%20post" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/twitter.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;t=Social%20Network%20Analysis&#038;s=100&#038;p&#091;url&#093;=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;p&#091;images&#093;&#091;0&#093;=http%3A%2F%2Fwww.dataforfun.com%2Fwp-content%2Fuploads%2F2016%2F08%2Ffishing-net-1526496__180.jpg&#038;p&#091;title&#093;=Social%20Network%20Analysis" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;"><img alt="Facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/facebook.png" /></a></p></div>
