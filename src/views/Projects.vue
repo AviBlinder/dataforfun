@@ -1,5 +1,17 @@
 <template>
   <div>
+     <!-- <section class="section">
+      <div class="container"> 
+      <div class="mt-5 columns is-centered is-8 is-variable">
+        <div class="column ">
+          <div v-for="cardContent in projects" :key="cardContent.id">
+            <general-card :cardcontent="cardContent"> </general-card>
+          </div>
+        </div>
+      </div>
+        </div>
+     </section> -->
+
     <!-- cards -->
     <section class="section">
       <div class="container">
@@ -77,14 +89,45 @@
     </section>
     
 
-
     <router-view> </router-view>
   </div>
 </template>
 
 <script>
+import generalCard from '@/components/generalCard.vue'
+
 export default {
-  
+  name: "projects",
+  components: {
+    generalCard
+  },
+  data(){
+    return{
+      projects: [
+        {
+        id:1,
+        title: 'Sentiment Analysis',
+        content: 'Sentiment Analysis',
+        target: 'sentiment-analysis',
+        image: require("../assets/easter-1238465__340-400x284.jpg"),
+        },
+        {
+        id:2,          
+        title: 'Healthy Life Expectancy',
+        content: 'Healthy Life Expectancy',
+        target: 'comparing-healthy-life',
+        image: require("../assets/elder-woman-with-hat-400x284.jpg"),
+        },
+        {
+        id:3,          
+        title: 'Social Network Analysis',
+        content: 'Social Network Analysis',
+        target: 'social-network-analysis',
+        image: require("../assets/fishing-net-1526496__180.jpg"),
+        },
+      ]
+     }
+  }
 }
 </script>
 
