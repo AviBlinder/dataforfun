@@ -223,78 +223,190 @@ they are the most popular ones.</p>
 </div>
 
 <h4 class="subtitle my-3 "><span style="color: #3366ff;">Descriptive statistics</span></h4>
-<p>
-  <div class="simplePullQuote right"><p>Graphs are comprised of vertices (also often called 'nodes') and edges connecting 
-    those nodes, thus nodes and edges represent the basic entities on a graph database'.</p>
-</div></p>
+
+<div class="block is-rounded has-text-weight-bold">
+  <blockquote><em>
+  Graphs are comprised of vertices (also often called 'nodes') and edges connecting 
+    those nodes, thus nodes and edges represent the basic entities on a graph database.
+    </em>
+  </blockquote >
+</div>
+
+<div class="block">
 
 <p>Now that we finally have a list of users and friends, we are ready to go…So we will start with some graph statistics
    in order to get acquainted with our network.</p>
+</div>
 
 
-<div class="wp_codebox"><table><tr id="p3912"><td class="line_numbers">
+<div class="block"><table><tr id="p3912"><td class="line_numbers">
   <pre>
 1
 2
 3
 4
 5
-</pre></td><td class="code" id="p391code2"><pre class="rsplus" style="font-family:monospace;">vcounts <span style="color: #080;">&lt;-</span> vcount<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span><span style="color: #080;">;</span>
+</pre>
+</td>
+<td class="code" id="p391code2">
+  <pre  style="font-family:monospace;">vcounts <span style="color: #080;">&lt;-</span> vcount<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span><span style="color: #080;">;</span>
 ecounts <span style="color: #080;">&lt;-</span> ecount<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span>
 vcounts<span style="color: #080;">;</span>ecounts
 <span style="color: #ff0000;">10197</span>
 <span style="color: #ff0000;">14503</span></pre></td></tr></table></div>
 
-<p>The number of users in this network that we just created is 10197 and the number of relationships between those users is 14503.</p>
-<p>Thus, we can say that the average number of friends per user in this network is about 1.4</p>
-<p><div class="simplePullQuote right"><p>In graph theory, the degree of a vertex of a graph is the number of edges incident to the vertex.</p>
-</div></p>
+<div class="block">
+<p>The number of users in this network that we just created is 10197 and the number of 
+  relationships between those users is 14503.</p>
+<p class="mt-2">Thus, we can say that the average number of friends per user in this 
+  network is about 1.4</p>
+  </div>
+
+<div class="block is-rounded has-text-weight-bold">
+<blockquote>
+<em>
+  <p>In graph theory, the degree of a vertex of a graph is the number of edges incident to the vertex.</p>
+</em>
+  </blockquote>  
+</div>
+
+<div class="block">
 <p>We can now get a list of degrees (edges connected directly to each node) of all the nodes:</p>
+</div>
 
-<div class="wp_codebox_msgheader"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span class="left2">Download <a href="http://www.dataforfun.com/wp-content/plugins/wp-codebox/wp-codebox.php?p=391&amp;download=degrees.txt">degrees.txt</a></span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3913"><td class="line_numbers"><pre>1
-</pre></td><td class="code" id="p391code3"><pre class="rsplus" style="font-family:monospace;">degree<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span></pre></td></tr></table></div>
+<div>
+  <table>
+    <tr >
+      <td >
+  <pre>1
+</pre>
+</td>
+<td class="code" id="p391code3">
+  <pre  style="font-family:monospace;">degree<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span></pre>
+  </td></tr></table></div>
 
-<p>and plot it to get an idea of the degree's distribution:</p>
-<p><div id="attachment_564" style="width: 490px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-564" class="wp-image-564 size-full" src="../assets/Degrees-Distributions.png" alt="degrees distribution on normal scale and log 10 scale" width="480" height="480" srcset="../assets/Degrees-Distributions.png 480w, ../assets/Degrees-Distributions-150x150.png 150w, ../assets/Degrees-Distributions-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" /><p id="caption-attachment-564" class="wp-caption-text">degrees distribution on normal scale and log 10 scale</p></div></p>
-<p>As we can see (and as we assumed from the relation between number of nodes and edges), the vast majority of nodes have only 1 or 2 friends).</p>
+<div class="block my-3">
+  <p>and plot it to get an idea of the degree's distribution:</p>
+</div>
+
+  <div id="attachment_564" 
+  style="width: 490px">
+  
+  <figure>
+
+  <img aria-describedby="caption-attachment-564" 
+  class="wp-image-564 size-full" 
+  src="../assets/Degrees-Distributions.png" 
+  alt="degrees distribution on normal scale and log 10 scale" 
+  width="480" height="480" 
+  srcset="../assets/Degrees-Distributions.png 480w, 
+  ../assets/Degrees-Distributions-150x150.png 150w, 
+  ../assets/Degrees-Distributions-300x300.png 300w" 
+  sizes="(max-width: 480px) 100vw, 480px" >
+
+  <figcaption  class="is-size-6	 has-text-centered	 has-text-weight-light">degrees distribution on normal scale and log 10 scale</figcaption>
+    </figure>
+
+  </div>
+
+<div class="block">
+
+<p>As we can see (and as we assumed from the relation between number of nodes and edges),
+   the vast majority of nodes have only 1 or 2 friends).</p>
+</div>
+
+<div class="block">
+
 <p>Another interesting measure is the diameter of the network:</p>
-<p><div class="simplePullQuote right"><p>The diameter of a graph is the length of the longest shortest-path</p>
-</div></p>
+</div>
 
-<div class="wp_codebox_msgheader wp_codebox_hide"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span ><a href="javascript:;" onclick="javascript:showCodeTxt('p391code4'); return false;">View Code</a> RSPLUS</span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3914"><td class="code" id="p391code4"><pre class="rsplus" style="font-family:monospace;">diameter<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span>
-<span style="color: #ff0000;">9</span></pre></td></tr></table></div>
+<div class="block has-text-weight-bold"><em>The diameter of a graph is the length of the longest shortest-path</em>
+</div>
 
-<p>In our case, the largest shortest-path between two users is 9, meaning that at the maximum, we need 7 additional connected friends in order to connect between two users.</p>
-<p>Also, we can get the 'names' of those users, and get their names as well:</p>
 
-<div class="wp_codebox_msgheader"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span class="left2">Download <a href="http://www.dataforfun.com/wp-content/plugins/wp-codebox/wp-codebox.php?p=391&amp;download=farthers_user.txt">farthers_user.txt</a></span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3915"><td class="line_numbers"><pre>1
+<div class="block">
+  <table> 
+    <tr id="p3914">
+      <td class="code" id="p391code4">
+        <pre class="rsplus" style="font-family:monospace;">diameter<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span>
+<span style="color: #ff0000;">9</span>
+</pre>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="block">
+
+<p><mark>In our case, the largest shortest-path between two users is 9, meaning that at the maximum, 
+  we need 7 additional connected friends in order to connect between two users. </mark></p>
+</div>
+
+<p>Also, we can get the 'names' of those users:</p>
+
+<div class="">
+  <table>
+    <tr id="p3915"><td class="line_numbers"><pre>1
 2
 3
 4
 </pre></td><td class="code" id="p391code5"><pre class="rsplus" style="font-family:monospace;">farthest_users <span style="color: #080;">&lt;-</span>  farthest.<span style="">nodes</span><span style="color: #080;">&#40;</span>Y_graph,directed <span style="color: #080;">=</span> <a href="http://astrostatistics.psu.edu/su07/R/html/graphics/html/F.html"><span style="color: #0000FF; font-weight: bold;">F</span></a><span style="color: #080;">&#41;</span>$vertices
-  farthest_users<span style="color: #080;">&#91;</span><span style="color: #080;">&#91;</span><span style="color: #ff0000;">1</span><span style="color: #080;">&#93;</span><span style="color: #080;">&#93;</span>$user_name<span style="color: #080;">;</span>  farthest_users<span style="color: #080;">&#91;</span><span style="color: #080;">&#91;</span><span style="color: #ff0000;">2</span><span style="color: #080;">&#93;</span><span style="color: #080;">&#93;</span>$user_name
+farthest_users<span style="color: #080;">&#91;</span><span style="color: #080;">&#91;</span><span style="color: #ff0000;">1</span><span style="color: #080;">&#93;</span><span style="color: #080;">&#93;</span>$user_name<span style="color: #080;">;</span>  farthest_users<span style="color: #080;">&#91;</span><span style="color: #080;">&#91;</span><span style="color: #ff0000;">2</span><span style="color: #080;">&#93;</span><span style="color: #080;">&#93;</span>$user_name
 <span style="color: #080;">&#91;</span><span style="color: #ff0000;">1</span><span style="color: #080;">&#93;</span> <span style="color: #ff0000;">&quot;Dorothy&quot;</span>
 <span style="color: #080;">&#91;</span><span style="color: #ff0000;">1</span><span style="color: #080;">&#93;</span> <span style="color: #ff0000;">&quot;Jess&quot;</span></pre></td></tr></table></div>
 
-<p><div class="simplePullQuote right"><p>The density of a graph is the ratio between the number of edges and the number of possible edges.</p>
-</div></p>
-<p>Another statistic, of which we can assume more or less its value, is the network density (e.g. how connected is the network in relation to the maximum possible connectivity)</p>
-<p>The density in the current network is calculated as follow:</p>
+<div class="block my-3 has-text-weight-bold has-text-justify">
+  <em>
+  <p>The density of a graph is the ratio between the number of edges and the number of possible edges.</p>
+  </em>
+</div>
 
-<div class="wp_codebox_msgheader"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span class="left2">Download <a href="http://www.dataforfun.com/wp-content/plugins/wp-codebox/wp-codebox.php?p=391&amp;download=farthers_user.txt">farthers_user.txt</a></span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3916"><td class="line_numbers"><pre>1
+<p>Another statistic, of which we can assume more or less its value, is the network density 
+  (e.g. how connected is the network in relation to the maximum possible connectivity)</p>
+
+  <div class="block">
+
+<p>The density in the current network is calculated as follow:</p>
+  </div>
+
+<div class="wp_codebox"><table><tr id="p3916"><td class="line_numbers"><pre>1
 2
 </pre></td><td class="code" id="p391code6"><pre class="rsplus" style="font-family:monospace;">graphDensity <span style="color: #080;">&lt;-</span> graph.<span style="">density</span><span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span>
 <span style="color: #ff0000;">0.000278988</span></pre></td></tr></table></div>
 
-<p>This is a really low value, hence rectifying our prior knowledge about the ratio of edges per node.<br />
-A final descriptive statistic is the Average degree of the neighbors of a given vertex</p>
-<p><div class="simplePullQuote right"><p>Beyond the degree distribution itself, it can be interesting to understand the manner in which vertices of different degrees are linked with each other.</p>
-</div></p>
+
+<div class="block my-3">
+
+<p>This is a really low value, hence rectifying our prior knowledge about the ratio of edges per node.</p>
+</div>
+ 
+
+<p> A final descriptive statistic is the Average degree of the neighbors of a given vertex</p>
+
+<div class="block has-text-weight-bold my-3">
+  <p>
+    <em>
+    Beyond the degree distribution itself, it can be interesting to understand 
+  the manner in which vertices of different degrees are linked with each other.
+    </em>
+  </p>
+</div>
+
+
+<div class="block">
+
 <p>Useful in assessing this characteristic is the notion of the <strong>average degree of the</strong></p>
 <p><strong>neighbors of a given vertex.</strong></p>
-<p>For example, a plot of average neighbor degree versus vertex degree, suggests that while there is a tendency for vertices of higher degrees to link with similar vertices, vertices of lower degree tend to link with vertices of both lower and higher degrees'.</p>
+</div>
 
-<div class="wp_codebox_msgheader"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span class="left2">Download <a href="http://www.dataforfun.com/wp-content/plugins/wp-codebox/wp-codebox.php?p=391&amp;download=neighbors_degrees.txt">neighbors_degrees.txt</a></span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3917"><td class="line_numbers"><pre>1
+<div class="block">
+
+<p>For example, a plot of average neighbor degree versus vertex degree, suggests that while there is a tendency 
+  for vertices of higher degrees to link with similar vertices, vertices of lower degree tend to link with vertices 
+  of both lower and higher degrees'.</p>
+</div>
+
+<div class="wp_codebox"><table><tr id="p3917"><td class="line_numbers"><pre>1
 2
 3
 4
@@ -307,30 +419,104 @@ degrees_table <span style="color: #080;">&lt;-</span> <a href="http://astrostati
 <a href="http://astrostatistics.psu.edu/su07/R/html/graphics/html/row.names.html"><span style="color: #0000FF; font-weight: bold;">row.<span style="">names</span></span></a><span style="color: #080;">&#40;</span>degrees_table<span style="color: #080;">&#41;</span> <span style="color: #080;">&lt;-</span> NULL
 degrees_table$Degree <span style="color: #080;">&lt;-</span> <a href="http://astrostatistics.psu.edu/su07/R/html/graphics/html/as.integer.html"><span style="color: #0000FF; font-weight: bold;">as.<span style="">integer</span></span></a><span style="color: #080;">&#40;</span>degrees_table$Degree<span style="color: #080;">&#41;</span></pre></td></tr></table></div>
 
-<p><img class="aligncenter wp-image-567 size-full" src="../assets/Vertex-Degrees-vs.-Neighbors-Degrees.png" alt="vertex-degrees-vs-neighbors-degrees" width="480" height="480" srcset="../assets/Vertex-Degrees-vs.-Neighbors-Degrees.png 480w, ../assets/Vertex-Degrees-vs.-Neighbors-Degrees-150x150.png 150w, ../assets/Vertex-Degrees-vs.-Neighbors-Degrees-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" /></p>
-<p>It looks like there are many nodes in this network with low degree's numbers but connected to high-degree neighbors.</p>
-<h4><span style="color: #3366ff;">Vertex/Edge centrality</span></h4>
-<p>Now that we have a more precise idea about the general 'look and feel' of each network, let's advance to the next stage: measuring centrality of nodes and edges</p>
-<p>In graph theory, there are three main ways of measuring the centrality of a vertex: <strong>closeness</strong>, <strong>betweeness</strong> and <strong>eigenvector centrality</strong>.</p>
-<p>Since 'betweeness' is usually a good descriptor of centrality in relation to flow of data, I'll concentrate the analysis of centrality upon this measure.</p>
-<p>In addition, a well-known measure of <strong>edge centrality </strong>is the edge-betweeness.</p>
-<p><div class="simplePullQuote right"><p>The vertex and edge betweeness are (roughly) defined by the number of shortest paths going through a vertex or an edge.</p>
-</div></p>
-<p>So, the next step in this query is finding which 'selected' users are also rated high according to 'node betweeness'.</p>
+<figure class="my-4">
+  <img class="aligncenter wp-image-567 size-full" 
+  src="../assets/Vertex-Degrees-vs.-Neighbors-Degrees.png" 
+  alt="vertex-degrees-vs-neighbors-degrees" 
+  width="480" height="480" 
+  srcset="../assets/Vertex-Degrees-vs.-Neighbors-Degrees.png 480w, 
+  ../assets/Vertex-Degrees-vs.-Neighbors-Degrees-150x150.png 150w, 
+  ../assets/Vertex-Degrees-vs.-Neighbors-Degrees-300x300.png 300w" 
+  sizes="(max-width: 480px) 100vw, 480px" />
+  
+</figure>
 
-<div class="wp_codebox_msgheader"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span class="left2">Download <a href="http://www.dataforfun.com/wp-content/plugins/wp-codebox/wp-codebox.php?p=391&amp;download=betweeness.txt">betweeness.txt</a></span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3918"><td class="line_numbers"><pre>1
+<div class="block">
+
+<p> <mark> It looks like there are many nodes in this network with low degree's 
+  numbers but connected to high-degree neighbors.</mark></p>
+</div>
+
+
+<h4 class="subtitle has-text-justified"><span style="color: #3366ff;">Vertex/Edge centrality</span></h4>
+
+<div class="block">
+
+<p>Now that we have a more precise idea about the general 'look and feel' of each network, 
+  let's advance to the next stage: measuring centrality of nodes and edges</p>
+</div>
+<div class="block">
+
+<p>In graph theory, there are three main ways of measuring the centrality of a vertex: 
+  <strong>closeness</strong>, <strong>betweeness</strong> and <strong>eigenvector centrality</strong>.</p>
+</div>
+<div class="block">
+<p>Since 'betweeness' is usually a good descriptor of centrality in relation to flow of data,
+   I'll concentrate the analysis of centrality upon this measure.</p>
+</div>
+<div class="block">
+<p>In addition, a well-known measure of <strong>edge centrality </strong>is the edge-betweeness.</p>
+</div>
+<div class="block">
+  <div class="block is-rounded has-text-weight-bold">
+  <blockquote><em>
+  <p>The vertex and edge betweeness are (roughly) defined by the number of
+   shortest paths going through a vertex or an edge.</p>
+
+</em>
+  </blockquote>
+</div>
+
+</div>
+
+<div class="block my-3">
+
+<p> <mark> So, the next step in this query is finding which 'selected' users are also rated high according to 'node betweeness'.</mark></p>
+</div>
+
+<div class="block"><table><tr id="p3918"><td class="line_numbers"><pre>1
 </pre></td><td class="code" id="p391code8"><pre class="rsplus" style="font-family:monospace;">btw_grade <span style="color: #080;">&lt;-</span> betweenness<span style="color: #080;">&#40;</span>Y_graph<span style="color: #080;">&#41;</span></pre></td></tr></table></div>
 
-<p>For each business network, I then rank the top 10 users according to their betweeness score, and then summarize the ranks of each user in all the networks.</p>
+<div class="block">
+<p>For each business network, I then rank the top 10 users according to their betweeness score, 
+  and then summarize the ranks of each user in all the networks.</p>
+</div>
+  
+  <div class="block">
+
 <p>The results are quite interesting...</p>
-<p><div id="attachment_583" style="width: 919px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-583" class="wp-image-583 size-full" src="../assets/Top-Users-by-Centrality-Rank-768x479.png" alt="Top Users By Betweenes Centrality" width="909" height="567" srcset="../assets/Top-Users-by-Centrality-Rank-768x479.png 909w, ../assets/Top-Users-by-Centrality-Rank-300x187.png 300w, ../assets/Top-Users-by-Centrality-Rank-768x479.png 768w, ../assets/Top-Users-by-Centrality-Rank-400x250.png 400w" sizes="(max-width: 909px) 100vw, 909px" /><p id="caption-attachment-583" class="wp-caption-text">Top Users By Betweeness Centrality</p></div></p>
-<h4><span style="color: #3366ff;">Results</span></h4>
-<p>As one might have expected, in low-density networks, users with high number of friends tend to be the more central ones.<br />
-However, although the top 2 users are both the most 'friendly' ones and the most central ones (however, in opposite order), for the other ones, this is not the case: users with lower number of friends are found to be more central, in average, one considering their centrality upon the 36 different networks of the selected restaurants.</p></div>
-			</div> <div >
-				
-				
-				<div ><p><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-linkedin nolightbox" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;title=Social%20Network%20Analysis" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/linkedin.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-mail nolightbox" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Social%20Network%20Analysis&#038;body=Hey%2C%20check%20this%20post:%20http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/mail.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;text=Hey%2C%20check%20this%20post" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/twitter.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;t=Social%20Network%20Analysis&#038;s=100&#038;p&#091;url&#093;=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;p&#091;images&#093;&#091;0&#093;=http%3A%2F%2Fwww.dataforfun.com%2Fwp-content%2Fuploads%2F2016%2F08%2Ffishing-net-1526496__180.jpg&#038;p&#091;title&#093;=Social%20Network%20Analysis" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;"><img alt="Facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/facebook.png" /></a></p></div>
+  </div>
+
+  <div  style="width: 919px" class="block">
+    <figure>
+
+    <img aria-describedby="caption-attachment-583" 
+    class="wp-image-583 size-full" 
+    src="../assets/Top-Users-by-Centrality-Rank-768x479.png" 
+    alt="Top Users By Betweenes Centrality" 
+    width="700" height="567" 
+    srcset="../assets/Top-Users-by-Centrality-Rank-768x479.png 909w, 
+    ../assets/Top-Users-by-Centrality-Rank-300x187.png 300w, 
+    ../assets/Top-Users-by-Centrality-Rank-768x479.png 768w, 
+    ../assets/Top-Users-by-Centrality-Rank-400x250.png 400w" 
+    sizes="(max-width: 909px) 100vw, 909px" />
+    <figcaption  >Top Users By Betweeness Centrality</figcaption>
+        </figure>
+
+    </div>
+    
+<h4 class="subtitle has-text-centered"><span style="color: #3366ff;">Results</span></h4>
+
+<p> <mark> As one might have expected, in low-density networks, users with high number 
+  of friends tend to be the more central ones.<br />
+However, although the top 2 users are both the most 'friendly' ones and the most central 
+ones (however, in opposite order), for the other ones, this is not the case: users with lower number 
+of friends are found to be more central, in average, one considering their centrality upon the 36
+ different networks of the selected restaurants.</mark></p>
+ 
+ </div>
+			</div> 
+      <div>	
 			</div> 
 				</article> 
         </div>
@@ -356,7 +542,6 @@ export default {
 </script>
 
 <style scoped>
-
 mark {
   background-color: rgb(104, 242, 247);
 }
