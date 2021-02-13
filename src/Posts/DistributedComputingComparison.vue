@@ -677,17 +677,23 @@ Although consumers applications can theoretically read data from specific shard
                </div>
               </div>      
 
-
-				<div>         
+<div class="block">
 <p>Finally, AWS<strong> EMR (Elastic MapReduce)</strong>, a fully managed Hadoop
  cluster, is in the 'last place' regarding importance of partition keys.</p>
-
+  </div>          
+<div class="block">
 <p>EMR enables parallel analysis of large files, such as logs, web indexing, 
   financial analysis and more.</p>
+</div>
+<div class="block">
 <p>Usually, data hosted in an Hadoop cluster will be used for a full analysis, 
   using methodologies such as MapReduce.</p>
+</div>
+<div class="block">
 <p>Thus, <strong>usually the whole data stored in an Hadoop cluster  is 
   usually analyzed by a specific job or query</strong>.</p>
+</div>
+<div class="block">
 <p>A well known example of MapReduce implementation is counting words in a 
   huge corpus of data: the 'huge' file is split into chunks of 64MB size 
   (or more) among several data nodes (and replicated at least three times since 
@@ -697,41 +703,107 @@ Although consumers applications can theoretically read data from specific shard
    the value is 'one' for each found word. The final <strong>'reduce' </strong>step
     in the job will get results from all the mappers and summarize all the 
     key-words into one final key-value list.</p>
+</div>
+<div class="block">
 <p>As a result of this unique architecture, there is no meaning for
    a 'partition key' since data are split evenly across data nodes in 
    chunks of 64MB (or higher).</p>
+</div>
+<div class="block">
 <p>The image below describes, in a nutshell, the Hadoop architecture that 
   is behind an EMR cluster:</p>
-<p><a href="http://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/" target="_blank"><img class="wp-image-1007 size-full" src="../assets/Hadoop-Model.png" alt="Hadoop Model" width="874" height="414" /></a></p>
+</div>
+  <a href="http://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/" target="_blank">
+              <div class='card equal-height'>
+                <div class='card-content is-flex is-horizontal-center'>
+                  <figure class="image is-870x420">
+                    <img 
+                      class="is-centered" 
+                      src="../assets/Hadoop-Model.png" 
+                      alt="Hadoop Model" 
+                      />
+                  <figcaption class="is-centered ml-4">Hadoop Model </figcaption>
+                </figure>
+               </div>
+              </div>      
+
+
+</a>
+
+<div class="blocl">
+
 <p>According to the Hadoop model, all the data is split (and replicated
    by default 3 times) across the data nodes.</p>
-<div>The Master nodes oversee the two key functional pieces that make
+</div>
+<div class="block">
+<p>The Master nodes oversee the two key functional pieces that make
    up Hadoop: storing lots of data (HDFS), and running parallel 
    computations on all that data (Map Reduce). The Name Node oversees 
    and coordinates the data storage function (HDFS), while the Job 
    Tracker oversees and coordinates the parallel processing of data
-    using Map Reduce.</div>
-<div>The goal here is fast parallel processing of lots of data. 
-  (for a detailed explanation about the Hadoop architecture, 
-  please refer to the <a href="http://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/" target="_blank">following post</a>)</div>
-<h4></h4>
+    using Map Reduce.</p>
+</div>
 
+<div class="block">
+  <p>
+  The goal here is fast parallel processing of lots of data. 
+  (for a detailed explanation about the Hadoop architecture, 
+  please refer to the <a href="http://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/" target="_blank">following post</a>)
+  </p>
+  </div>
 
 <h3 class="subtitle has-text-centered my-3">Summary</h3>
-<p>We can place the 4 services in a 2X2 matrix summarizing 
-  the relation between distribution and partitioning:</p>
-<p>As a 'good old' (well, not so old) relational database, <strong>Redshift</strong> is both a <strong>distributed and partitioned</strong> service. It even offers several partitioning approaches (a.k.a. distribution styles).</p>
-<p><strong>DynamoDB</strong>, a NoSQL database, is <strong>distributed and partitioned</strong>, but the partitioning is much more restrict to a specific attribute in each table.</p>
-<p><strong>Kinesis Streams</strong> is mainly a <strong>distributed </strong>service, offering partitions (as shards) mainly as a way of managing the stream of incoming data.</p>
-<p>Finally, <strong>EMR</strong> is a <strong>distributed</strong> service, with no 'key' partitioning mechanisms.</p></div>
-			 <div class=" et_pb_divider et_pb_divider_3 et_pb_divider_position_ "></div><div >
-				
-				
-				<div ><p>The material for this post is based on my knowledge and experience and also based on several sources, mainly:</p>
+<div class="block">
+<p>
+<mark>
+  We can place the 4 services in a 2X2 matrix summarizing 
+  the relation between distribution and partitioning:
+</mark>
+  </p>
+</div>
+<div class="block">
+<p>
+  <mark>
+  As a 'good old' (well, not so old) relational database, 
+  <strong>Redshift</strong> is both a <strong>distributed and partitioned</strong>
+   service. It even offers several partitioning approaches (a.k.a. distribution styles).
+  </mark>
+   </p>
+</div>
+<div class="block">
+<p>
+  <mark>
+  <strong>DynamoDB</strong>, a NoSQL database, is <strong>distributed and 
+  partitioned</strong>, but the partitioning is much more restrict to a specific 
+  attribute in each table.
+  </mark>
+  </p>
+</div>
+<div class="block">
+<p>
+  <mark>
+  <strong>Kinesis Streams</strong> is mainly a <strong>distributed </strong>service, 
+offering partitions (as shards) mainly as a way of managing the stream of 
+incoming data.
+  </mark>
+</p>
+</div>
+<div class="block">
+<p>
+  <mark>
+  Finally, <strong>EMR</strong> is a <strong>distributed</strong> service, with no
+ 'key' partitioning mechanisms.
+  </mark>
+ </p>
+</div>
+       <div>
+				<div class="block my-4">
+          <p>The material for this post is based on my knowledge and experience and
+             also based on several sources, mainly:</p>
 <ol>
-<li>AWS documentation</li>
-<li><a href="https://acloud.guru/course/aws-certified-big-data-specialty/dashboard" target="_blank">acloud.guru big data specialization</a></li>
-<li>Several other sources, cited across the post.</li>
+<li class="mt-2">AWS documentation</li>
+<li class="mt-2"><a href="https://acloud.guru/course/aws-certified-big-data-specialty/dashboard" target="_blank">acloud.guru big data specialization</a></li>
+<li class="mt-2">Several other sources, cited across the post.</li>
 </ol>
 <p>&nbsp;</p>
 
