@@ -1,54 +1,156 @@
 <template>
   <div>
-        <section class="section">
+    <section class="section">
       <div class="container">
         <div class="mt-5 columns is-4">
         <div class="column is-3 is-hidden-mobile is-vcentered">
               <projects-side-bar :currentProject="project_id"> </projects-side-bar>
         </div>
-        
-
         <div class="column is-7">
-
-
 	<article>
+			<div class="section">	
+				<div class="container">
+          
+          <h1 class="title has-text-centered">Social Network Analysis</h1>
 
-				
-					<div >
-					<div >
-			
-    		<div>
-		    	<div>
-            <div>
-					    <div>
-				        <div>
-			          	<div>	
-				<div ><h1>Social Network Analysis</h1>
-<h2>Finding the most socially-important user on Yelp dataset</h2>
-<h3><span style="color: #3366ff;">Introduction</span></h3>
-<p>The cliché says that the world is an increasingly interconnected place, and the connections between different entities are often best represented with a graph.</p>
-<p>The purpose of this project is implementing several SNA (Social Network Analysis) techniques and algorithms on Yelp datasets, in order to gain some insights related to 'importance' of users in Yelp's network.</p>
-<h3><span style="color: #3366ff;">Question</span></h3>
-<p>Ever wondered who is the most influential user in a specific network? Who is that person, <strong>assuming that you have to pick just one</strong>, is the most valuable in that social network?</p>
-<p>As stated in the introduction, the purpose of this analysis is trying to answer to that question by applying tools used in the world of graph databases.</p>
-<p>There is more than one answer to the question, and different methodologies can be implemented in that inquiry, so the following analysis is just one out of many, rendering a specific output out of several possible ones.</p>
-<h3><span style="color: #3366ff;">Analysis</span></h3>
-<h4><span style="color: #3366ff;">Datasets</span></h4>
-<p>The sources of data I've used are based on 3 Yelp datasets: 'users', 'business' and 'reviews'.</p>
-<p>In order to create a network of users and friendships, I 'normalized' the users' datasets, creating a 'long-formatted' list of friends for each user (since the original format was wide-formatted, e.g. each user has an array of related friends).</p>
-<h4><span style="color: #3366ff;">Filtering businesses and related users</span></h4>
-<p>The whose dataset of users has more than 680,000 users, and the 'long' dataset of users-friends (e.g. a dataset with two rows: a user and all his 'friends'), has more than 4 million rows…</p>
-<p>Making analysis on the whole datasets is quite resource-demanding (CPU, memory, etc.), so the first part of the analysis concentrates in the reduction of those datasets:</p>
-<p><strong>Step 1: </strong>Since the central 'entity' around which the whole Yelp's platform works is the <em>business</em>, I started the analysis by summarizing the number of reviews each business has, and then picking the ones with higher numbers, since I assume they are the most popular ones.</p>
-<p>For sake of simplicity, I set a threshold of 100 first most reviewed restaurants for the next step of the analysis.</p>
-<p>Below is a list of the 10 most reviewed restaurants and a histogram showing the distribution of reviews among the top 100 most reviewed restaurants</p>
-<p><div id="attachment_565" style="width: 332px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-565" class="wp-image-565 size-full" src="../assets/Top-Reviewed-Restaurants-e1481657780925.png" alt="top-reviewed-restaurants" width="322" height="262" srcset="../assets/Top-Reviewed-Restaurants-e1481657780925.png 322w, ../assets/Top-Reviewed-Restaurants-e1481657780925-300x244.png 300w" sizes="(max-width: 322px) 100vw, 322px" /><p id="caption-attachment-565" class="wp-caption-text">Table of Top Reviewed Restaurants</p></div></p>
-<p><img class="aligncenter wp-image-569 size-full" src="../assets/Number-of-Reviews-of-Top-100-Restaurants.jpg" alt="Review's Histogram of top 100 Yelp Restaurants" width="479" height="480" srcset="../assets/Number-of-Reviews-of-Top-100-Restaurants.jpg 479w, ../assets/Number-of-Reviews-of-Top-100-Restaurants-150x150.jpg 150w, ../assets/Number-of-Reviews-of-Top-100-Restaurants-300x300.jpg 300w" sizes="(max-width: 479px) 100vw, 479px" /></p>
-<p><strong>Step 2: </strong>Having a list of 100 businesses (restaurants) with highest number of reviews by different users is not enough, so the second step is summarizing, out of that list, the ones with the highest number of <strong>users with friends. </strong>This is very important on Yelp's datasets, since only 43% of the users on the dataset have at least one friend.</p>
-<p><strong>Out of the 100 restaurants, only 36 of them have at least 30% of 'friendly reviewers' </strong>(e.g. users that gave review to that restaurant and that have at least one friend on Yelp's dataset).</p>
-<p><strong>Step 3:</strong> Now that I managed to isolate the top 36 restaurant with friendly reviewers, the next step will end the preparations stage: I'll isolate all those users involved on those reviews, in order to start the SNA stage.</p>
-<p>Let's see who are the 'friendly users' that gave the highest number of reviews to those 36 restaurants:<img class="aligncenter wp-image-566 size-full" src="../assets/Top-Users-by-Number-of-Reviewes-510x382.png" alt="top-users-by-number-of-reviewes" width="712" height="577" srcset="../assets/Top-Users-by-Number-of-Reviewes-510x382.png 712w, ../assets/Top-Users-by-Number-of-Reviewes-300x243.png 300w" sizes="(max-width: 712px) 100vw, 712px" /></p>
-<h4><span style="color: #3366ff;">Analysis of the Social Network</span></h4>
+        <h2 class=" my-4 subtitle has-text-centered">
+          Finding the most socially-important users on Yelp dataset
+        </h2>
+        <h3 class="my-3"><span style="color: #3366ff;">Introduction</span></h3>
+
+<div class="block">
+<p>The cliché says that the world is an increasingly interconnected place, 
+  and the connections between different entities are often best represented
+   with a graph.</p>
+</div>   
+
+<div class="block">
+
+<p>The purpose of this project is implementing several SNA (Social Network Analysis) 
+  techniques and algorithms on Yelp datasets, in order to gain some insights related 
+  to 'importance' of users in Yelp's network.</p>
+
+</div>
+
+<h3 class="my-3"><span style="color: #3366ff;">Question</span></h3>
+
+<div class="block">
+
+<p>Ever wondered who is the most influential user in a specific network? Who is
+   that person, <strong>assuming that you have to pick just one</strong>, is the 
+   most valuable in that social network?</p>
+</div>
+
+<div class="block">
+
+<p>As stated in the introduction, the purpose of this analysis is trying to answer
+   to that question by applying tools used in the world of graph databases.</p>
+
+</div>
+<div class="block">
+
+<p>There is more than one answer to the question, and different methodologies 
+  can be implemented in that inquiry, so the following analysis is just one
+   out of many, rendering a specific output out of several 
+   possible ones.</p>
+</div>
+
+<h3 class="subtitle has-text-justified my-3"><span style="color: #3366ff;">Analysis</span></h3>
+
+<h4 class="my-4"><span style="color: #3366ff;">The Datasets</span></h4>
+
+<p>The sources of data I've used are based on 3 Yelp datasets: 'users', 
+  'business' and 'reviews'.</p>
+
+<div class="block">
+<p>In order to create a network of users and friendships, I 
+  'normalized' the users' datasets, creating a 'long-formatted' list of 
+  friends for each user (since the original format was wide-formatted, e.g. each user 
+  has an array of related friends).</p>
+</div>
+
+<h4 class="my-4"><span style="color: #3366ff;">Filtering businesses and related users</span></h4>
+
+<div class="block">
+
+<p>The whose dataset of users has more than 680,000 users, and the 'long' dataset 
+  of users-friends (e.g. a dataset with two rows: a user and all his 'friends'), 
+  has more than 4 million rows…</p>
+</div>
+
+<div class="block">
+<p>Making analysis on the whole datasets is quite resource-demanding
+   (CPU, memory, etc.), so the first part of the analysis concentrates in the 
+   reduction of those datasets:</p>
+</div>
+
+<div class="block">
+<p><strong>Step 1: </strong>Since the central 'entity' around which the whole Yelp's 
+platform works is the <em>business</em>, I started the analysis by summarizing the number 
+of reviews each business has, and then picking the ones with higher numbers, since I assume 
+they are the most popular ones.</p>
+</div>
+
+<div class="block">
+<p>For sake of simplicity, I set a threshold of 100 first most reviewed restaurants for
+   the next step of the analysis.</p>
+</div>
+<div class="block">
+<p>Below is a list of the 10 most reviewed restaurants and a histogram showing the 
+  distribution of reviews among the top 100 most reviewed restaurants</p>
+</div>
+<p>
+  <div style="width: 332px" class="ml-6">
+  <img aria-describedby="caption-attachment-565" 
+  class="wp-image-565 size-full" 
+  src="../assets/Top-Reviewed-Restaurants-e1481657780925.png" 
+  alt="top-reviewed-restaurants" 
+  width="322" height="262" 
+  srcset="../assets/Top-Reviewed-Restaurants-e1481657780925.png 322w, 
+  ../assets/Top-Reviewed-Restaurants-e1481657780925-300x244.png 300w" 
+  sizes="(max-width: 322px) 100vw, 322px" /><p id="caption-attachment-565" 
+  class="has-text-info-dark  ">Table of Top Reviewed Restaurants</p>
+  </div>
+</p>
+
+<p>
+  <img class="aligncenter wp-image-569 size-full" 
+  src="../assets/Number-of-Reviews-of-Top-100-Restaurants.jpg" 
+  alt="Review's Histogram of top 100 Yelp Restaurants" 
+  width="479" height="480" 
+  srcset="../assets/Number-of-Reviews-of-Top-100-Restaurants.jpg 479w, 
+  ../assets/Number-of-Reviews-of-Top-100-Restaurants-150x150.jpg 150w, 
+  ../assets/Number-of-Reviews-of-Top-100-Restaurants-300x300.jpg 300w" 
+  sizes="(max-width: 479px) 100vw, 479px" />
+  </p>
+
+<p><strong>Step 2: </strong>Having a list of 100 businesses (restaurants) with highest
+ number of reviews by different users is not enough, so the second step is summarizing,
+  out of that list, the ones with the highest number of
+   <strong>users with friends. </strong>
+   This is very important on Yelp's datasets, since only 43% of the users on the
+    dataset have at least one friend.</p>
+
+<p><strong>Out of the 100 restaurants, only 36 of them have at least 30% of 
+  'friendly reviewers' </strong>(e.g. users that gave review to that restaurant 
+  and that have at least one friend on Yelp's dataset).</p>
+
+<p><strong>Step 3:</strong> Now that I managed to isolate the top 36 restaurant
+ with friendly reviewers, the next step will end the preparations stage: 
+ I'll isolate all those users involved on those reviews, in order to start
+  the SNA stage.</p>
+
+<p>Let's see who are the 'friendly users' that gave the highest number of 
+  reviews to those 36 restaurants:
+  <img class="aligncenter wp-image-566 size-full" 
+  src="../assets/Top-Users-by-Number-of-Reviewes-510x382.png" 
+  alt="top-users-by-number-of-reviewes" 
+  width="712" height="577" 
+  srcset="../assets/Top-Users-by-Number-of-Reviewes-510x382.png 712w, 
+  ../assets/Top-Users-by-Number-of-Reviewes-300x243.png 300w" 
+  sizes="(max-width: 712px) 100vw, 712px" /></p>
+
+<h4 class="my-3"><span style="color: #3366ff;">Analysis of the Social Network</span></h4>
 <p>Now that I isolated a list of users from the most reviewed restaurants, I'll start this Social Network Analysis with some descriptive statistics.</p>
 <p>Side by side with the analysis, I'll explain key concepts related to the analysis of social networks.</p>
 <p><div class="simplePullQuote right"><p>The analysis is performed using 'igraph' R package, which is <strong>the </strong>package for SNA.</p>
@@ -169,21 +271,6 @@ However, although the top 2 users are both the most 'friendly' ones and the most
 				
 				<div ><p><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-linkedin nolightbox" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;title=Social%20Network%20Analysis" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/linkedin.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-mail nolightbox" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Social%20Network%20Analysis&#038;body=Hey%2C%20check%20this%20post:%20http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/mail.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;text=Hey%2C%20check%20this%20post" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/twitter.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-30 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;t=Social%20Network%20Analysis&#038;s=100&#038;p&#091;url&#093;=http%3A%2F%2Fwww.dataforfun.com%2Fproject%2Fsocial-network-analysis%2F&#038;p&#091;images&#093;&#091;0&#093;=http%3A%2F%2Fwww.dataforfun.com%2Fwp-content%2Fuploads%2F2016%2F08%2Ffishing-net-1526496__180.jpg&#038;p&#091;title&#093;=Social%20Network%20Analysis" style="font-size: 0px; width:30px;height:30px;margin:0;margin-bottom:5px;"><img alt="Facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="30" height="30" style="display: inline; width:30px;height:30px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://www.dataforfun.com/wp-content/plugins/social-media-feather/synved-social/addons/extra-icons/image/social/wheel/64x64/facebook.png" /></a></p></div>
 			</div> 
-			</div> 
-				
-				
-			</div> 
-				
-				
-			</div> 		</div>
-	</div><!-- .-->
-	
-			
-		</div><!-- # -->
-							</div> <!-- . -->
-
-				
-				
 				</article> 
         </div>
         </div>
@@ -193,17 +280,17 @@ However, although the top 2 users are both the most 'friendly' ones and the most
 </template>
 
 <script>
-import projectsSideBar from '@/components/projectsSideBar'
+import projectsSideBar from "@/components/projectsSideBar";
 
 export default {
-components: {
-  projectsSideBar
+  components: {
+    projectsSideBar,
   },
-  data(){
-    return{
-      project_id: 1
-    }
-  }
+  data() {
+    return {
+      project_id: 1,
+    };
+  },
 };
 </script>
 
