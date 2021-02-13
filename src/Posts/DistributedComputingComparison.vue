@@ -230,7 +230,6 @@
    <a href="http://docs.aws.amazon.com/redshift/latest/dg/t_designating_distribution_styles.html" target="_blank">
    designing distribution keys</a>.
 </p>      
-				<div>
               <div class='card equal-height'>
                 <div class='card-content is-flex is-horizontal-center'>
                   <figure class="image is-200x200">
@@ -381,7 +380,6 @@
   </p>
    </div>
 
-<div>
 <div class="block">
   <p>
   Creating A GLOBAL SECONDARY INDEX is quite similar to creating a new table. 
@@ -432,81 +430,301 @@
                </div>
               </div>      
 
-<div>
-
-<div class="block" > 
+<div class="block"> 
   <p>
   The result of the calculation is then rounded up.
   </p>
   </div>
 
-<div>For example, if a database is of 25GB size, the provisioned RCU = 15000 and the provisioned WCU = 12000, the number of partitions will be: CEILING (MAX( 25/10, 15000/3000 + 12000/1000)) = CEILING (MAX(2.5, 5+12)) = 17 Partitions.</div>
+<div class="block">
+<p>
+  For example, if a database is of 25GB size, the provisioned RCU = 15000 
+  and the provisioned WCU = 12000, the number of partitions will be: 
+  CEILING (MAX( 25/10, 15000/3000 + 12000/1000)) = 
+  CEILING (MAX(2.5, 5+12)) = 17 Partitions.
+</p>
+  </div>
 
-<div>Issues that we might face when designing provisioned capacity:</div>
+<div class="block">
+  <p>
+  Issues that we might face when designing provisioned capacity:
+  </p>
+  </div>
 
-<div><b>1. </b>If you provision <strong>too much read/write capacity</strong>, the table will be split, although you may not have the whole data loaded.</div>
-<div>Solution: Try to find a partition key that will balance the distribution of partitions.</div>
-<div> The downsize is that it may add complexity to the table/query design.</div>
-<div><strong>2. Although DynamoDB splits partitions automatically</strong>, the initial design of your table is very important, in order to guarantee an even distribution of data between partitions: This is important if you plan to have more than 10GB of data or high R/WCU’s</div>
-<div><strong>3.</strong> Another consideration in designing tables is that  partitions will automatically increase, but...</div>
-<div>&#8211; While there is an automatic spit of data across partitions, <b>there is no automatic decrease when load/performance reduces. </b></div>
-<div>&#8211; Allocated WCU and RCU is split between partitions.</div>
+<div class="block">
+  
+  <b>1. </b>If you provision <strong>too much read/write capacity</strong>, the table 
+will be split, although you may not have the whole data loaded.
+</div>
 
-<div> In summary, <strong>partitioning </strong>in DynamoDB is influenced by two key factors: <strong>primary keys (partition keys) and provisioned capacity.</strong> A good understanding of those factors is fundamental for getting a well-performing table.</div>
+<div class="block">Solution: Try to find a partition key that will balance the
+   distribution of partitions.
+   </div>
+<div class="block"> The downsize is that it may add complexity to the 
+  table/query design.
+  </div>
+<div class="block">
+  <strong>2. Although DynamoDB splits partitions automatically</strong>, 
+  the initial design of your table is very important, in order to guarantee an even
+   distribution of data between partitions: This is important if you plan to have
+    more than 10GB of data or high R/WCU’s
+    </div>
+<div class="block"><strong>3.</strong> Another consideration in designing tables is that
+ partitions will automatically increase, but...
+ </div>
+<div class="block">&#8211; While there is an automatic split of data across 
+  partitions, <b>there is no automatic decrease when 
+    load/performance reduces. </b></div>
+<div class="block">
+  &#8211; Allocated WCU and RCU is split between partitions.
+  </div>
+
+<div class="block my-3">
+  <p>
+<mark>
+   In summary, <strong>partitioning </strong>in DynamoDB is influenced by two key 
+   factors: 
+   <strong>primary keys (partition keys) and provisioned capacity.</strong> 
+   A good understanding of those factors is fundamental for getting a well-performing
+    table.
+</mark>
+  </p>
+    </div>
+
+
+              <div class='card equal-height'>
+                <div class='card-content is-flex is-horizontal-center'>
+                  <figure class="image is-630x300">
+                    <img 
+                      class="is-centered" 
+                      src="../assets/DynamoDB-Partitions-Example.png" 
+                      alt="DynamoDB Partitions Example" 
+                      />
+                  <figcaption class="is-centered ml-4">
+                    DynamoDB Partitions Example
+                    <br>
+                    Image source: 
+                    <a 
+                    href="https://www.slideshare.net/InfoQ/amazon-dynamodb-design-patterns-best-practices" 
+                    target="_blank">https://www.slideshare.net/InfoQ/amazon-dynamodb-design-patterns-best-practices
+                    </a>                    
+                    </figcaption>
+                </figure>
+               </div>
+              </div>            		
+				
+              <div class='card equal-height'>
+                <div class='card-content is-flex is-horizontal-center'>
+                  <figure class="image is-200x200">
+                    <img 
+                      class="is-centered" 
+                      src="../assets/Kinesis-Stream-Logo.png" 
+                      alt="AWS Kinesis Stream" 
+                      />
+                  <figcaption class="is-centered ml-6">AWS Kinesis Stream</figcaption>
+                </figure>
+               </div>
+              </div>      
+          
+
+<div class="block">
+<p>In the third place, according to <em>partition importance</em>, I'd place 
+<strong>AWS Kinesis Stream</strong>. It is a fully managed service that
+ enables building custom applications that process or analyze 
+ streaming data.</p>
+</div>
+
+<div class="block">
+
+<p>It can be used for website clickstreams, financial transactions, 
+  social media feeds, IT logs, location-tracking events and more.
+  </p>
+</div>
+
+<div class="block">
+<p>
+  In Kinesis Streams service, we can deem a “table” entity as 
+  a <strong>Kinesis Stream</strong>, and then each stream is divided
+   into <strong>“Shards”</strong>.
+  </p>  
+   </div>
+
+<div class="block">
+  <p>
+<mark>
+  So, <strong>a shard is the parallel concept of a “table partition”
+  </strong>, since records get distributed among the shards defined in 
+  each stream.
+</mark>
+  </p>
+  </div>
+
+<div class="block">
+  <p>
+<mark>
+  As with DynamoDB, the main reason for provisioning a small or large number of
+   shards is the expected number of I/O per second, and not a certain business logic of 
+   data distribution across partitions.
+</mark>
+  </p>
+   </div>
+<div class="block">
+<p>
+  But in contrast with DynamoDB, a<em> producer application</em> 
+(e.g. an application that sends records to a Kinesis stream) might specify 
+for each written record, to which specific shard it 
+should be routed.
+
+</p>
+</div>
+
+<div class="block">
+<p>
+  <mark>
+  In Kinesis Streams console, you can estimate the number of shards you’ll need to 
+  provide for a specific stream (and thus estimating the number of partitions
+   of the stream):
+  </mark>
+  </p>  
+</div>
+              <div class='card equal-height'>
+                <div class='card-content is-flex is-horizontal-center'>
+                  <figure class="image is-860x350">
+                    <img 
+                      class="is-centered" 
+                      src="../assets/Kinesis-Stream-Shards-Console.png" 
+                      alt="Kinesis Stream Shards Console" 
+                      />
+                  <figcaption class="is-centered ml-4">Kinesis Stream Shards Console</figcaption>
+                </figure>
+               </div>
+              </div>      
+
+
+
+<div class="block">
+  <p>
+    <mark>
+  Similar to DynamoDB (where capacity is a function of provisioned RCU/WCU),
+   a stream is composed of one or more shards, and <strong>each of which provides a 
+     fixed unit of capacity</strong>
+    </mark>
+  </p>
+     </div>
+
+<div class="block">
+  <p>
+
+  Each shard can support <strong>up to 5 transactions per 
+    second for reads</strong>,
+ <strong>up to a maximum total data read rate of 2 MB per second</strong> and <strong>up 
+   to 1,000 records per second for writes</strong>, <strong>up to a maximum total 
+     data write rate of 1 MB per second</strong> (including partition keys). 
+     This, the data capacity of a stream is a function of the number of shards that
+      you provide.
+  </p>
+      </div>
 
 <div>
-<div><img class="size-full wp-image-1004" src="../assets/DynamoDB-Partitions-Example.png" alt="DynamoDB Partitions Example" width="634" height="303" /></div>
-<div>
-<p>Image source: <a href="https://www.slideshare.net/InfoQ/amazon-dynamodb-design-patterns-best-practices" target="_blank">https://www.slideshare.net/InfoQ/amazon-dynamodb-design-patterns-best-practices</a>.</p>
+  The image bellow shows a Kinesis Stream Model:
 </div>
+              <div class='card equal-height'>
+                <div class='card-content is-flex is-horizontal-center'>
+                  <figure class="image is-1000x490">
+                    <img 
+                      class="is-centered" 
+                      src="../assets/Kinesis-Stream-Model.png" 
+                      alt="Kinesis Stream Model" 
+                      />
+                  <figcaption class="is-centered ml-4">Kinesis Stream Model</figcaption>
+                </figure>
+               </div>
+              </div>      
+
+<div class="block">
+  <p>
+Although consumers applications can theoretically read data from specific shard
+ (e.g. partitions), as far as I know it is not a common usage. On the opposite, 
+ <strong>usually the whole stream is processed</strong> and only third party services
+  might aggregate or filter data according to specific criterias. This way of working
+   places Kinesis Stream service nearby EMR in the sense that <strong>the whole data in a 
+     stream is processed and the partitioning is meant to enhance parallel processing and 
+     support expected I/O capacities.</strong>
+
+  </p>
 </div>
-</div>
-</div></div>
+
+<div class="block">
+  <p>
+
+  Following this analogy, <strong>DynamoDB</strong> should be placed between Kinesis Stream
+   and Redshift since the partitioning of data is meant both for querying specific 
+   chunks of data (as with Redshift) but also as a way of effectively provisioning
+    read/write throughput.
+  </p>
+    </div>
       
-      <div class=" et_pb_divider et_pb_divider_1 et_pb_divider_position_ "></div><div >
-				
-				
-				<div ><p><div id="attachment_1008" style="width: 176px" class="wp-caption alignleft"><img aria-describedby="caption-attachment-1008" class="wp-image-1008" src="../assets/Kinesis-Stream-Logo.png" alt="AWS Kinesis Stream" width="166" height="165" /><p id="caption-attachment-1008" class="wp-caption-text">AWS Kinesis Stream</p></div></p>
-<p>In the third place, according to <em>partition importance</em>, I'd place <strong>AWS Kinesis Stream</strong>. It is a fully managed service that enables building custom applications that process or analyze streaming data.</p>
-<p>It can be used for website clickstreams, financial transactions, social media feeds, IT logs, location-tracking events and more.</p>
-<div>In Kinesis Streams service, we can deem a “table” entity as a <strong>Kinesis Stream</strong>, and then each stream is divided into <strong>“Shards”</strong>.</div>
-<div>So, <strong>a shard is the parallel concept of a “table partition”</strong>, since records get distributed among the shards defined in each stream.</div>
+              <div class='card equal-height'>
+                <div class='card-content is-flex is-horizontal-center'>
+                  <figure class="image is-200x200">
+                    <img 
+                      class="is-centered" 
+                      src="../assets/EMR-Logo.png" 
+                      alt="AWS EMR Logo" 
+                      />
+                  <figcaption class="is-centered ml-6">AWS EMR </figcaption>
+                </figure>
+               </div>
+              </div>      
 
-<div>As with DynamoDB, the main reason for provisioning a small or large number of shards is the expected number of I/O per second, and not a certain business logic of data distribution across partitions.</div>
-<div>But in contrast with DynamoDB, a<em> producer application</em> (e.g. an application that sends records to a Kinesis stream) might specify for each written record, to which specific shard it should be routed.</div>
 
-<div>In Kinesis Streams console, you can estimate the number of shards you’ll need to provide for a specific stream (and thus estimating the number of partitions of the stream):</div>
-<div><img class="size-full wp-image-1010" src="../assets/Kinesis-Stream-Shards-Console.png" alt="Kinesis Stream Shards Console" width="865" height="331" /></div>
-<div>Similar to DynamoDB (where capacity is a function of provisioned RCU/WCU), a stream is composed of one or more shards, and <strong>each of which provides a fixed unit of capacity:</strong></div>
-<div>Each shard can support <strong>up to 5 transactions per second for reads</strong>, <strong>up to a maximum total data read rate of 2 MB per second</strong> and <strong>up to 1,000 records per second for writes</strong>, <strong>up to a maximum total data write rate of 1 MB per second</strong> (including partition keys). This, the data capacity of a stream is a function of the number of shards that you provide.</div>
+				<div>         
+<p>Finally, AWS<strong> EMR (Elastic MapReduce)</strong>, a fully managed Hadoop
+ cluster, is in the 'last place' regarding importance of partition keys.</p>
 
-<div>The image bellow shows a Kinesis Stream Model:<br />
-<img class="size-full wp-image-1009" src="../assets/Kinesis-Stream-Model.png" alt="Kinesis Stream Model" width="1019" height="487" />Although consumers applications can theoretically read data from specific shard (e.g. partitions), as far as I know it is not a common usage. On the opposite, <strong>usually the whole stream is processed</strong> and only third party services might aggregate or filter data according to specific criterias. This way of working places Kinesis Stream service nearby EMR in the sense that <strong>the whole data in a stream is processed and the partitioning is meant to enhance parallel processing and support expected I/O capacities.</strong></div>
-
-<div>Following this analogy, <strong>DynamoDB</strong> should be placed between Kinesis Stream and Redshift since the partitioning of data is meant both for querying specific chunks of data (as with Redshift) but also as a way of effectively provisioning read/write throughput.</div></div>
-			</div> <div class=" et_pb_divider et_pb_divider_2 et_pb_divider_position_ "></div><div >
-				
-				
-				<div ><p><div id="attachment_1006" style="width: 174px" class="wp-caption alignleft"><img aria-describedby="caption-attachment-1006" class="size-full wp-image-1006" src="../assets/EMR-Logo.png" alt="AWS EMR Logo" width="164" height="170" /><p id="caption-attachment-1006" class="wp-caption-text">AWS EMR</p></div></p>
-<p>Finally, AWS<strong> EMR (Elastic MapReduce)</strong>, a fully managed Hadoop cluster, is in the 'last place' regarding importance of partition keys.</p>
-<p>EMR enables parallel analysis of large files, such as logs, web indexing, financial analysis and more.</p>
-<p>Usually, data hosted in an Hadoop cluster will be used for a full analysis, using methodologies such as MapReduce.</p>
-<p>Thus, <strong>usually the whole data stored in an Hadoop cluster  is usually analyzed by a specific job or query</strong>.</p>
-<p>A well known example of MapReduce implementation is counting words in a huge corpus of data: the 'huge' file is split into chunks of 64MB size (or more) among several data nodes (and replicated at least three times since the hardware is 'cheap' and prone to fail). Then each chunk is analyzed in parallel, where the basic function <strong>maps</strong> each word and creates key-value entries (for each word), where the key is the specific word and the value is 'one' for each found word. The final <strong>'reduce' </strong>step in the job will get results from all the mappers and summarize all the key-words into one final key-value list.</p>
-<p>As a result of this unique architecture, there is no meaning for a 'partition key' since data are split evenly across data nodes in chunks of 64MB (or higher).</p>
-<p>The image below describes, in a nutshell, the Hadoop architecture that is behind an EMR cluster:</p>
+<p>EMR enables parallel analysis of large files, such as logs, web indexing, 
+  financial analysis and more.</p>
+<p>Usually, data hosted in an Hadoop cluster will be used for a full analysis, 
+  using methodologies such as MapReduce.</p>
+<p>Thus, <strong>usually the whole data stored in an Hadoop cluster  is 
+  usually analyzed by a specific job or query</strong>.</p>
+<p>A well known example of MapReduce implementation is counting words in a 
+  huge corpus of data: the 'huge' file is split into chunks of 64MB size 
+  (or more) among several data nodes (and replicated at least three times since 
+  the hardware is 'cheap' and prone to fail). Then each chunk is analyzed in
+   parallel, where the basic function <strong>maps</strong> each word and creates 
+   key-value entries (for each word), where the key is the specific word and 
+   the value is 'one' for each found word. The final <strong>'reduce' </strong>step
+    in the job will get results from all the mappers and summarize all the 
+    key-words into one final key-value list.</p>
+<p>As a result of this unique architecture, there is no meaning for
+   a 'partition key' since data are split evenly across data nodes in 
+   chunks of 64MB (or higher).</p>
+<p>The image below describes, in a nutshell, the Hadoop architecture that 
+  is behind an EMR cluster:</p>
 <p><a href="http://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/" target="_blank"><img class="wp-image-1007 size-full" src="../assets/Hadoop-Model.png" alt="Hadoop Model" width="874" height="414" /></a></p>
-<p>According to the Hadoop model, all the data is split (and replicated by default 3 times) across the data nodes.</p>
-<div>The Master nodes oversee the two key functional pieces that make up Hadoop: storing lots of data (HDFS), and running parallel computations on all that data (Map Reduce). The Name Node oversees and coordinates the data storage function (HDFS), while the Job Tracker oversees and coordinates the parallel processing of data using Map Reduce.</div>
-<div>The goal here is fast parallel processing of lots of data. (for a detailed explanation about the Hadoop architecture, please refer to the <a href="http://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/" target="_blank">following post</a>)</div>
+<p>According to the Hadoop model, all the data is split (and replicated
+   by default 3 times) across the data nodes.</p>
+<div>The Master nodes oversee the two key functional pieces that make
+   up Hadoop: storing lots of data (HDFS), and running parallel 
+   computations on all that data (Map Reduce). The Name Node oversees 
+   and coordinates the data storage function (HDFS), while the Job 
+   Tracker oversees and coordinates the parallel processing of data
+    using Map Reduce.</div>
+<div>The goal here is fast parallel processing of lots of data. 
+  (for a detailed explanation about the Hadoop architecture, 
+  please refer to the <a href="http://bradhedlund.com/2011/09/10/understanding-hadoop-clusters-and-the-network/" target="_blank">following post</a>)</div>
 <h4></h4>
-<h3>Summary</h3>
-<p>We can place the 4 services in a 2X2 matrix summarizing the relation between distribution and partitioning:</p>
+
+
+<h3 class="subtitle has-text-centered my-3">Summary</h3>
+<p>We can place the 4 services in a 2X2 matrix summarizing 
+  the relation between distribution and partitioning:</p>
 <p>As a 'good old' (well, not so old) relational database, <strong>Redshift</strong> is both a <strong>distributed and partitioned</strong> service. It even offers several partitioning approaches (a.k.a. distribution styles).</p>
 <p><strong>DynamoDB</strong>, a NoSQL database, is <strong>distributed and partitioned</strong>, but the partitioning is much more restrict to a specific attribute in each table.</p>
 <p><strong>Kinesis Streams</strong> is mainly a <strong>distributed </strong>service, offering partitions (as shards) mainly as a way of managing the stream of incoming data.</p>
 <p>Finally, <strong>EMR</strong> is a <strong>distributed</strong> service, with no 'key' partitioning mechanisms.</p></div>
-			</div> <div class=" et_pb_divider et_pb_divider_3 et_pb_divider_position_ "></div><div >
+			 <div class=" et_pb_divider et_pb_divider_3 et_pb_divider_position_ "></div><div >
 				
 				
 				<div ><p>The material for this post is based on my knowledge and experience and also based on several sources, mainly:</p>
