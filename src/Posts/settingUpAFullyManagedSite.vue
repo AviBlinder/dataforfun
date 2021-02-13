@@ -6,25 +6,13 @@
         <div class="column is-3 is-hidden-mobile is-vcentered">
               <posts-side-bar :currentPost="post_id"> </posts-side-bar>
         </div>
-        
-
         <div class="column is-7">
-
-    <article id="post-921">
+    <article>
+                    <div class="section">
+                <div class="container">
+        <h1 class="is-size-4 has-text-centered has-text-weight-medium">
+          Setting up a fully managed website in AWS</h1>
       <div>
-        <h1 >Setting up a fully managed website in AWS</h1>
-      </div>
-      <!-- .et_post_meta_wrapper -->
-
-      <div >
-        <div id="">
-          <div>
-            <div>
-              <div>
-                <div>
-                  <div>
-                    <div>
-                      <div>
                         <p>
                           Finally, I finished migrating my website from a web
                           hosting platform to AWS.
@@ -89,7 +77,7 @@
                             the WordPress platform, on the private network.
                           </li>
                         </ol>
-                      </div>
+
                     </div>
 
                     <div>
@@ -311,20 +299,9 @@
                         <p>I hope you find it useful.</p>
                       </div>
                     </div>
-
-                    <div></div>
-                  </div>
+            
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- .-->
-        </div>
-        <!-- # -->
-      </div>
-      <!-- . -->
-      <div></div>
-      <!-- .et_post_meta_wrapper -->
+                    </div>
     </article>
         </div>
         </div>
