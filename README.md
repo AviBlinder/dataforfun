@@ -6,10 +6,12 @@ Dataforfun
 <span style="color: blue">
 <h5> To Do: </h5>
 <ul>
-<li>Style posts/projects </li>
-<li>Style Home page and About page </li>
-<li>Main page: filter by category </li>
+<li>Style Tools post,  Home page and About page  - review 2 examples</li>
+<li> Style images on Posts page </li>
 <li>Add Google Ads / Google Analytics </li>
+---> Publish!
+
+<li>Main page: filter by category </li>
 </ul>
 </span>
 
