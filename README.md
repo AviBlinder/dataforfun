@@ -7,7 +7,8 @@ Dataforfun
 <h5> To Do: </h5>
 <ul>
 <li>Style posts/projects </li>
-<li>Design overall site's style </li>
+<li>Style Home page and About page </li>
+<li>Main page: filter by category </li>
 <li>Add Google Ads / Google Analytics </li>
 </ul>
 </span>

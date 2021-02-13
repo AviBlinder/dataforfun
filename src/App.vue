@@ -19,6 +19,11 @@ export default {
 }
 </script>
 <style>
+article {
+  line-height: 1.8;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+}
+
 /* #app { 
    font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
