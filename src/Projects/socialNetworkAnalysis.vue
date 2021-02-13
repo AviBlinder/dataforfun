@@ -26,9 +26,9 @@
 
 <div class="block">
 
-<p>The purpose of this project is implementing several SNA (Social Network Analysis) 
-  techniques and algorithms on Yelp datasets, in order to gain some insights related 
-  to 'importance' of users in Yelp's network.</p>
+<p> <mark> The purpose of this project is implementing several SNA (Social Network Analysis) 
+  techniques and algorithms on Yelp datasets , in order to gain some insights related 
+  to 'importance' of users in Yelp's network.</mark></p>
 
 </div>
 
@@ -36,9 +36,11 @@
 
 <div class="block">
 
-<p>Ever wondered who is the most influential user in a specific network? Who is
+<p> <mark> Ever wondered who is the most influential user in a specific network? Who is
    that person, <strong>assuming that you have to pick just one</strong>, is the 
-   most valuable in that social network?</p>
+   most valuable in that social network?
+   </mark>
+   </p>
 </div>
 
 <div class="block">
@@ -108,7 +110,8 @@ they are the most popular ones.</p>
   width="322" height="262" 
   srcset="../assets/Top-Reviewed-Restaurants-e1481657780925.png 322w, 
   ../assets/Top-Reviewed-Restaurants-e1481657780925-300x244.png 300w" 
-  sizes="(max-width: 322px) 100vw, 322px" /><p id="caption-attachment-565" 
+  sizes="(max-width: 322px) 100vw, 322px" />
+  <p id="caption-attachment-565" 
   class="has-text-info-dark  ">Table of Top Reviewed Restaurants</p>
   </div>
 </p>
@@ -124,56 +127,114 @@ they are the most popular ones.</p>
   sizes="(max-width: 479px) 100vw, 479px" />
   </p>
 
+<div class="block my-3" >
+
 <p><strong>Step 2: </strong>Having a list of 100 businesses (restaurants) with highest
  number of reviews by different users is not enough, so the second step is summarizing,
   out of that list, the ones with the highest number of
    <strong>users with friends. </strong>
    This is very important on Yelp's datasets, since only 43% of the users on the
     dataset have at least one friend.</p>
+</div>
 
+<div class="block">
 <p><strong>Out of the 100 restaurants, only 36 of them have at least 30% of 
   'friendly reviewers' </strong>(e.g. users that gave review to that restaurant 
   and that have at least one friend on Yelp's dataset).</p>
+</div>
 
+<div class="block my-3">
 <p><strong>Step 3:</strong> Now that I managed to isolate the top 36 restaurant
  with friendly reviewers, the next step will end the preparations stage: 
  I'll isolate all those users involved on those reviews, in order to start
   the SNA stage.</p>
 
+</div>
+<div class="block">
 <p>Let's see who are the 'friendly users' that gave the highest number of 
   reviews to those 36 restaurants:
-  <img class="aligncenter wp-image-566 size-full" 
+  
+  <img class="aligncenter my-3 size-full" 
   src="../assets/Top-Users-by-Number-of-Reviewes-510x382.png" 
   alt="top-users-by-number-of-reviewes" 
   width="712" height="577" 
   srcset="../assets/Top-Users-by-Number-of-Reviewes-510x382.png 712w, 
   ../assets/Top-Users-by-Number-of-Reviewes-300x243.png 300w" 
   sizes="(max-width: 712px) 100vw, 712px" /></p>
+</div>
 
-<h4 class="my-3"><span style="color: #3366ff;">Analysis of the Social Network</span></h4>
-<p>Now that I isolated a list of users from the most reviewed restaurants, I'll start this Social Network Analysis with some descriptive statistics.</p>
-<p>Side by side with the analysis, I'll explain key concepts related to the analysis of social networks.</p>
-<p><div class="simplePullQuote right"><p>The analysis is performed using 'igraph' R package, which is <strong>the </strong>package for SNA.</p>
-</div></p>
-<p>For a detailed documentation, please refer to <a href="http://igraph.org/r/">igraph oficial site</a>'</p>
-<h4><span style="color: #3366ff;">The basic logic</span></h4>
-<p>One possible approach for this analysis would be creating a unified dataset of users and friends involved in the review of the top restaurants, and then finding the most central one.</p>
-<p>An alternative approach, which I'm in fact implementing, is handling each restaurant as an isolated network of users: with this approach, I'm measuring the importance of each user for each restaurant, and then combining the data in order to see if there is a potential user that outstands as important for most of those networks.</p>
-<p>So, prior to the creation of a graph dataset, I need to create a list of users (that reviewed each of the selected 36 restaurants), and their friends.</p>
+<h4 class="my-3 subtitle"><span style="color: #3366ff;">Analysis of the Social Network</span></h4>
+
+<div class="block">
+<p>Now that I isolated a list of users from the most reviewed restaurants, I'll start this Social Network Analysis 
+  with some descriptive statistics.</p>
+</div>
+<div class="block">
+<p>Side by side with the analysis, I'll explain key concepts related to the analysis 
+  of social networks.</p>
+</div>
+<div class="block">
+    <p>
+      <mark> The analysis is performed using 'igraph' R 
+        package, which is <strong>the </strong>package for SNA.
+  </mark>
+  </p>
+</div>
+
+
+<p class="mb-3">For a detailed documentation, please refer to <a href="http://igraph.org/r/">igraph oficial site</a>'</p>
+
+<div class="block">
+<h4 class="subtitle my-3"><span style="color: #3366ff;">The basic logic</span></h4>
+</div>
+
+<div class="block">
+
+<p>One possible approach for this analysis would be creating a unified dataset of users and friends involved in the
+   review of the top restaurants, and then finding the most central one.</p>
+</div>
+<div class="block">
+<p>An alternative approach, which I'm in fact implementing, is handling each restaurant as an isolated 
+  network of users: with this approach, I'm measuring the importance of each user for each restaurant, 
+  and then combining the data in order to see if there is a potential user that outstands as important 
+  for most of those networks.</p>
+</div>
+<div class="block">
+<p>So, prior to the creation of a graph dataset, I need to create a list of users (that reviewed each 
+  of the selected 36 restaurants), and their friends.</p>
+
 <p>Each such list is the input to the graph analysis…</p>
-<p>For simplicity of explanation, I'll take just one business ('Delmonico Steakhouse') and detail it's network-related features. A summary list is appended at the end of this section.</p>
+</div>
+<div class="block">
+<p>For simplicity of explanation, I'll take just one business ('Delmonico Steakhouse') and detail
+   it's network-related features. A summary list is appended at the end of this section.</p>
+</div>
+
+<div class="block">
 <p>Creating the graph data frame:</p>
 
-<div class="wp_codebox_msgheader"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span class="left2">Download <a href="http://www.dataforfun.com/wp-content/plugins/wp-codebox/wp-codebox.php?p=391&amp;download=graph_data_frame.txt">graph_data_frame.txt</a></span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3911"><td class="line_numbers"><pre>1
+    <div class="wp_codebox"><table><tr id="p3911"><td class="line_numbers"><pre>1
 </pre></td><td class="code" id="p391code1"><pre class="rsplus" style="font-family:monospace;">Y_graph <span style="color: #080;">&lt;-</span> graph.<span style="">data</span>.<span style="">frame</span><span style="color: #080;">&#40;</span>friends_b1,directed <span style="color: #080;">=</span> FALSE,vertices <span style="color: #080;">=</span> users_vertices<span style="color: #080;">&#41;</span></pre></td></tr></table></div>
+</div>
 
-<p>Since the relation between user and friend is bidirectional (e.g. if A is friend of B, then B is always friend of A), the graph is not directed (thus the parameter directed=FALSE)</p>
-<h4><span style="color: #3366ff;">Descriptive statistics</span></h4>
-<p><div class="simplePullQuote right"><p>Graphs are comprised of vertices (also often called 'nodes') and edges connecting those nodes, thus nodes and edges represent the basic entities on a graph database'.</p>
+<div class="block">
+<p>Since the relation between user and friend is bidirectional (e.g. if A is friend of B, then B is always friend of A), the
+   graph is not directed (thus the parameter directed=FALSE)</p>
+</div>
+
+<h4 class="subtitle my-3 "><span style="color: #3366ff;">Descriptive statistics</span></h4>
+<p>
+  <div class="simplePullQuote right"><p>Graphs are comprised of vertices (also often called 'nodes') and edges connecting 
+    those nodes, thus nodes and edges represent the basic entities on a graph database'.</p>
 </div></p>
-<p>Now that we finally have a list of users and friends, we are ready to go…So we will start with some graph statistics in order to get acquainted with our network.</p>
 
-<div class="wp_codebox_msgheader"><span class="right"><sup><a href="http://www.ericbess.com/ericblog/2008/03/03/wp-codebox/#examples" target="_blank" title="WP-CodeBox HowTo?"><span style="color: #99cc00">?</span></a></sup></span><span class="left2">Download <a href="http://www.dataforfun.com/wp-content/plugins/wp-codebox/wp-codebox.php?p=391&amp;download=vcount_ecount.txt">vcount_ecount.txt</a></span><div class="codebox_clear"></div></div><div class="wp_codebox"><table><tr id="p3912"><td class="line_numbers"><pre>1
+<p>Now that we finally have a list of users and friends, we are ready to go…So we will start with some graph statistics
+   in order to get acquainted with our network.</p>
+
+
+<div class="wp_codebox"><table><tr id="p3912"><td class="line_numbers">
+  <pre>
+1
 2
 3
 4
@@ -295,4 +356,8 @@ export default {
 </script>
 
 <style scoped>
+
+mark {
+  background-color: rgb(104, 242, 247);
+}
 </style>
