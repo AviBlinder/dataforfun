@@ -10,38 +10,11 @@
         <div class="column is-10">
 
     <article>
-      <div >
-        <div id="" >
-          <div >
-            <div >
-              <div
-                class="   "
-              >
-                <section
-                  class="     "
-                >
-                  <div class=" left">
-                    <div class=" center">
-                      <div >
-                        <div >
                           <h1>
                             Forecasting Time Series by Selecting the Most
                             Suitable Model
                           </h1>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   
-                  
-                </section>
-                <section
-                  class="  et_pb_fullwidth_header_1   "
-                >
-                  <div class=" left">
-                    <div class=" center">
-                      <div >
-                        <div >
                           <h3>
                             If you need to forecast sales, budget or any other
                             related figures, feel free using this widget, which
@@ -52,30 +25,14 @@
                             The selected model is the one having lower error
                             metrics among most of the executed models.
                           </h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   
                   <div >
                     <a href="#" class="scroll-down-container">
                       <span class="scroll-down et-pb-icon">&#x33;</span>
                     </a>
                   </div>
-                </section>
-              </div>
               
-              <div class=" et_pb_section_1 ">
-                <div >
-                  <div
-                    
-                  >
-                    <div class=" et_pb_accordion et_pb_accordion_0">
-                      <div
-                        class="et_pb_toggle  et_pb_accordion_item et_pb_accordion_item_0  et_pb_toggle_open"
-                      >
-                        <h5 class="et_pb_toggle_title">Why Time Series</h5>
-                        <div class="et_pb_toggle_content clearfix">
+                       <h5> Why Time Series</h5>
                           <p>
                             &#8211; Anything that is observed sequentially over
                             time is a time series.
@@ -101,17 +58,10 @@
                             >
                             (quarterly or monthly).
                           </p>
-                        </div>
-                        <!-- .et_pb_toggle_content -->
-                      </div>
-                      <!-- .et_pb_toggle -->
-                      <div
-                        class="et_pb_toggle  et_pb_accordion_item et_pb_accordion_item_1  et_pb_toggle_close"
-                      >
-                        <h5 class="et_pb_toggle_title">
+                        <h5>
                           Forecasting Time Series
                         </h5>
-                        <div class="et_pb_toggle_content clearfix">
+                        <div>
                           <p>
                             Time series models implemented by this utility
                             execute a wide range of models, from
@@ -119,16 +69,9 @@
                             and ARIMA models.
                           </p>
                         </div>
-                        <!-- .et_pb_toggle_content -->
-                      </div>
-                      <!-- .et_pb_toggle -->
-                      <div
-                        class="et_pb_toggle  et_pb_accordion_item et_pb_accordion_item_2  et_pb_toggle_close"
-                      >
-                        <h5 class="et_pb_toggle_title">
+                        <h5>
                           How to use this widget
                         </h5>
-                        <div class="et_pb_toggle_content clearfix">
                           <p>
                             1. Choose the starting date of the time series.<br />
                             2. Choose how many periods to forecast (bear in mind
@@ -146,45 +89,15 @@
                             &#8211;&gt; Be patient since it may take a few
                             seconds till you get the results.
                           </p>
-                        </div>
-                        <!-- .et_pb_toggle_content -->
-                      </div>
-                      <!-- .et_pb_toggle -->
-                    </div>
-                    <!-- .et_pb_accordion -->
-                  </div>
-                  
-                </div>
-                
-              </div>
               
-              <div
-                class=" et_pb_section_2  "
-              >
-                <div
-                  class=" et_pb_fullwidth_code et_pb_fullwidth_code_0"
-                >
-                  <div >
                     <iframe
-                      style="border: none; width: 1600px; height: 900px;"
+                      style="border: none; width: 1200px; height: 700px;"
                       src="https://aviblinder.shinyapps.io/tsselect_app-nondynamicoutput/"
                       width="300"
                       height="150"
-                    ></iframe>
-                  </div>
-                </div>
-                <!-- .et_pb_fullwidth_code -->
-              </div>
-              
-              <div class=" et_pb_section_3 ">
-                <div class=" et_pb_row_1">
-                  <div
-                    class=" et_pb_column_1   "
-                  >
-                    <div
-                      
                     >
-                      <div >
+                    </iframe>
+             
                         <p>
                           In case you want to use a dynamic output plot, use
                           <span style="color: #000000;"
@@ -200,28 +113,7 @@
                         <p>
                           Please bear in mind that the initial load of this
                           application takes a few seconds...
-                        </p>
-                      </div>
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-                
-              </div>
-              
-              <div
-                class=" et_pb_section_4  "
-              ></div>
-              
-            </div>
-            
-          </div>
-          <!-- .-->
-        </div>
-        <!-- # -->
-      </div>
-      <!-- . -->
+                        </p>    
     </article>
         </div>
         </div>
@@ -235,4 +127,15 @@
   export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+mark {
+  background-color: rgb(104, 242, 247);
+}
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.card {
+  box-shadow: none;
+}
+</style>
