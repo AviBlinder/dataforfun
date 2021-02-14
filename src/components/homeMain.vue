@@ -38,7 +38,6 @@
 
               <button class="button is-medium is-rounded ml-3">
                 <router-link
-                  style="margin-right: 2rem"
                   :to="{ name: 'About' }"
                   tag="a"
                 >
