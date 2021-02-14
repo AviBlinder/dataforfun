@@ -207,7 +207,14 @@
         </div>
       </div>
     </section>
-    <!--  -->
+
+    <!-- <transition name="fade"> -->
+    <transition>
+      <keep-alive>
+        <router-view> </router-view>
+      </keep-alive>
+    </transition>
+
   </div>
 </template>
 
@@ -218,7 +225,12 @@ export default {};
 
 
 <style>
-
+/* .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+} */
 
 </style>
 <style scoped>
