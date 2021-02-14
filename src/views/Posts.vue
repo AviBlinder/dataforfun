@@ -4,30 +4,39 @@
     <section class="section">
       <div class="container">
         <div class="mt-5 columns is-8 is-multiline is-variable">
-          <!-- class="column is-4-tablet is-3-desktop" -->
           <!-- Kickstarter  -->
           <div class="column">
-            <div class="card">
-              <div class="card-image has-text-centered px-3 py-3">
+            <div class="card equal-height">
+              <div class="card-body">
+              <div class='card-content is-flex is-horizontal-center'>
+               <div class="card-image has-text-centered px-3 py-3">
                 <img
-                  src="../assets/dounats_image.jpg"
-                  alt="Sentiment Analysis"
-                  style="height:250;width:auto;"
+                  src="../assets-posts/dounats_image-500_x_500.jpg"
+            srcset="
+              ../assets-posts/dounats_image-500_x_500.jpg   500w,
+              ../assets-posts/dounats_image-250_x_250.jpg   250w
+            "
+            sizes="(max-width: 768px) 100vw, 250px"
+                  alt="Kickstarter Deshboar"
+                  style=""
                 />
+                 </div>
               </div>
               <div class="card-content">
                 <p class="title is-size-5 has-text-centered">
-                  Kickstarter Success
+                  Kickstarter Success Rates
                 </p>
-                <span></span>
+                
               </div>
+              </div>
+              
               <footer class="card-footer">
                 <p class="card-footer-item">
                   <router-link
                     style="margin-left: 1rem"
                     :to="{ name: 'kickstarter-dashboard' }"
                     tag="a"
-                    >Kickstarter Dashboard</router-link
+                    >Show me</router-link
                   >
                 </p>
               </footer>
@@ -35,19 +44,27 @@
           </div>
           <!-- Distributed Compuring  -->
           <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
+            <div class="card equal-height">
+              <div class="card-body">
+              <div class='card-content is-flex is-horizontal-center'>
               <div class="card-image has-text-centered px-3 py-3">
                 <img
-                  src="../assets/Distributing-System.png"
-                  alt="Sentiment Analysis"
-                  style="height:250;width:auto;"
+                  src="../assets-posts/Distributing-System-500_x_500.png"
+            srcset="
+              ../assets-posts/Distributing-System-500_x_500.png   500w,
+              ../assets-posts/Distributing-System-250_x_250.png   250w
+            "
+            sizes="(max-width: 768px) 100vw, 250px"
+                  alt="Distributed Computing on AWS"
                 />
+              </div>                
               </div>
               <div class="card-content">
                 <p class="title is-size-5 has-text-centered">
                   Distributed Computing Comparison
                 </p>
-                <span></span>
+
+              </div>
               </div>
               <footer class="card-footer">
                 <p class="card-footer-item">
@@ -55,27 +72,36 @@
                     style="margin-left: 1rem"
                     :to="{ name: 'aws-comparing-distributed-computing' }"
                     tag="a"
-                    >Comparing Distributed Computing
+                    >Show me
                   </router-link>
                 </p>
               </footer>
+
             </div>
           </div>
           <!-- AB Testing With Route53 Service  -->
           <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
+            <div class="card equal-height">
+              <div class="card-body">
+              <div class='card-content is-flex is-horizontal-center'>
               <div class="card-image has-text-centered px-3 py-3">
                 <img
-                  src="../assets/traffic_policy-dashboard.png"
-                  alt="Sentiment Analysis"
-                  style="height:250;width:auto;"
+                  src="../assets-posts/traffic_policy-dashboard-500_x_500.png"
+            srcset="
+              ../assets-posts/traffic_policy-dashboard-500_x_500.png   500w,
+              ../assets-posts/traffic_policy-dashboard-250_x_250.png   250w
+            "
+            sizes="(max-width: 768px) 100vw, 250px"
+
+                  alt="AB Testing on Route53"
                 />
+              </div>
               </div>
               <div class="card-content">
                 <p class="title is-size-5 has-text-centered">
                   AB Testing With Route53 Service
                 </p>
-                <span></span>
+              </div>
               </div>
               <footer class="card-footer">
                 <p class="card-footer-item">
@@ -83,7 +109,7 @@
                     style="margin-left: 1rem"
                     :to="{ name: 'ab-testing-with-route53' }"
                     tag="a"
-                    >AB Testing With Route53 Service</router-link
+                    >Show me</router-link
                   >
                 </p>
               </footer>
@@ -91,19 +117,27 @@
           </div>
           <!-- Setting Up A Fully Managed Side on AWS  -->
           <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
+            <div class="card equal-height">
+              <div class="card-body">
+              <div class='card-content is-flex is-horizontal-center'>              
               <div class="card-image has-text-centered px-3 py-3">
                 <img
-                  src="../assets/DFF-Architecture-VPC-setup.png"
-                  alt="Sentiment Analysis"
-                  style="height:250;width:auto;"
+                  src="../assets-posts/DFF-Architecture-Final-500_x_500.png"
+            srcset="
+              ../assets-posts/DFF-Architecture-Final-500_x_500.png   500w,
+              ../assets-posts/DFF-Architecture-Final-250_x_250.png   250w
+            "
+            sizes="(max-width: 768px) 100vw, 250px"
+
+                  alt="Website architecture on AWS"
                 />
+              </div>
               </div>
               <div class="card-content">
                 <p class="title is-size-5 has-text-centered">
                   Setting Up A Fully Managed Side on AWS
                 </p>
-                <span></span>
+              </div>
               </div>
               <footer class="card-footer">
                 <p class="card-footer-item">
@@ -111,7 +145,7 @@
                     style="margin-left: 1rem"
                     :to="{ name: 'setting-up-a-fully-managed-site' }"
                     tag="a"
-                    >Setting Up A Fully Managed Side on AWS</router-link
+                    >Show me</router-link
                   >
                 </p>
               </footer>
@@ -119,19 +153,28 @@
           </div>
           <!-- Analysing R Packages Trends  -->
           <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
+            <div class="card equal-height">
+              <div class="card-body">              
+              <div class='card-content is-flex is-horizontal-center'>
               <div class="card-image has-text-centered px-3 py-3">
                 <img
-                  src="../assets/Distribution-of-Packages-by-Continent.png"
-                  alt="Sentiment Analysis"
-                  style="height:250;width:auto;"
+                  src="../assets-posts/Distribution-of-Packages-by-Continent-500_x_500.png"
+            srcset="
+              ../assets-posts/Distribution-of-Packages-by-Continent-500_x_500.png   500w,
+              ../assets-posts/Distribution-of-Packages-by-Continent-250_x_250.png   250w
+            "
+            sizes="(max-width: 768px) 100vw, 250px"
+
+                  alt="R Packages usage"
+                  style=""
                 />
+              </div>
               </div>
               <div class="card-content">
                 <p class="title is-size-5 has-text-centered">
                   Analysing R Packages Trends
                 </p>
-                <span></span>
+              </div>
               </div>
               <footer class="card-footer">
                 <p class="card-footer-item">
@@ -139,7 +182,7 @@
                     style="margin-left: 1rem"
                     :to="{ name: 'analyzing-R-packages-trends' }"
                     tag="a"
-                    >Analysing R Packages Trends</router-link
+                    >Show me</router-link
                   >
                 </p>
               </footer>
@@ -148,18 +191,29 @@
           <!--  -->
           <!-- Neo4J Practical Tips  -->
           <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
+            <div class="card equal-height">
+              <div class="card-body">
+              <div class='card-content is-flex is-horizontal-center'>
               <div class="card-image has-text-centered px-3 py-3">
-                <img src="../assets/neo-tips.png" 
-                alt="Sentiment Analysis"
-                  style="height:250;width:auto;"
+                <img 
+                  src="../assets-posts/neo-tips-500_x_500.png" 
+            srcset="
+              ../assets-posts/neo-tips-500_x_500.png   500w,
+              ../assets-posts/neo-tips-250_x_250.png   250w
+            "
+            sizes="(max-width: 768px) 100vw, 250px"
+
+                  alt="NEO4J Tips"
+                  style=""
                  />
               </div>
+              </div>
+
               <div class="card-content">
                 <p class="title is-size-5 has-text-centered">
                   Neo4J Practical Tips
                 </p>
-                <span></span>
+              </div>
               </div>
               <footer class="card-footer">
                 <p class="card-footer-item">
@@ -167,28 +221,36 @@
                     style="margin-left: 1rem"
                     :to="{ name: 'Neo4j-pratical-tips' }"
                     tag="a"
-                    >Neo4J Practical Tips</router-link
+                    >Show me</router-link
                   >
                 </p>
               </footer>
             </div>
           </div>
-          <!--  -->
-          <!-- 'unwind' R function -->
+\          <!-- 'unwind' R function -->
           <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
+            <div class="card equal-height">
+              <div class="card-body">
+              <div class='card-content is-flex is-horizontal-center'>
               <div class="card-image has-text-centered px-3 py-3">
                 <img
-                  src="../assets/20160819_111401-e1476995529285-300x169.jpg"
-                  alt="Sentiment Analysis"
-                  style="height:250;width:auto;"
+                  src="../assets-posts/Candy-Jars-500_x_500.jpg"
+            srcset="
+              ../assets-posts/Candy-Jars-500_x_500.jpg   500w,
+              ../assets-posts/Candy-Jars-250_x_250.jpg   250w
+            "
+            sizes="(max-width: 768px) 100vw, 250px"
+                  alt="'unwind' R function"
+                  style=""
                 />
               </div>
+              </div>
+
               <div class="card-content">
                 <p class="title is-size-5 has-text-centered">
                   'unwind' R function
                 </p>
-                <span></span>
+              </div>
               </div>
               <footer class="card-footer">
                 <p class="card-footer-item">
@@ -197,23 +259,18 @@
                     :to="{ name: 'unwind-r-function' }"
                     tag="a"
                   >
-                    'unwind' R function</router-link
+                    Show me</router-link
                   >
                 </p>
               </footer>
             </div>
           </div>
-          <!--  -->
         </div>
       </div>
     </section>
 
-    <!-- <transition name="fade"> -->
-    <transition>
-      <keep-alive>
+
         <router-view> </router-view>
-      </keep-alive>
-    </transition>
 
   </div>
 </template>
@@ -225,19 +282,42 @@ export default {};
 
 
 <style>
-/* .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-} */
 
 </style>
 <style scoped>
 .img {
     float: left;
-    /* width:  100px; */
-    /* height: 100px; */
+
+  width: 100px;
+  height: 100px;    
     background-size: cover;
 }
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.card {
+  box-shadow: none;
+}
+.card-body:hover {
+  border: 0.8px solid grey;
+
+}
+
+.card-body{
+  background-color: rgb(206, 206, 204,0.2);
+}
+
+.card-footer {
+  border: 0.8px solid grey;
+  border-radius: 0%;
+}
+
+.card-footer:hover {
+  border-radius: 5%;
+  /* background-color: #58c2f3; */
+}
+
+
 </style>

@@ -2,9 +2,14 @@
   <div id="app">
       
       <main-navbar> </main-navbar>
-
+        <!-- mode="out-in" -->
+  <!-- <transition
+        name="fade"
+      >
+      <keep-alive> -->
     <router-view> </router-view>
-    
+      <!-- </keep-alive>
+  </transition> -->
   </div>
 </template>
 
@@ -18,7 +23,22 @@ export default {
 
 }
 </script>
+
 <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.15s;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+
+
 article {
   line-height: 1.8;
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card px-3 py-3">
+    <div class="card equal-height px-3 py-3">
       <div class="card-image is-flex is-horizontal-center ">
        
         <figure class='image '>
@@ -56,7 +56,8 @@ $card-color: #232323;
 .is-horizontal-center {
   justify-content: center;
 }
+
 .card {
-  /* background-color: green; */
+  box-shadow: none;
 }
 </style>
