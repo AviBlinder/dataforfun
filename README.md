@@ -42,3 +42,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 Vue router transitions [routing transitions](https://markus.oberlehner.net/blog/vue-router-page-transitions/)
+
