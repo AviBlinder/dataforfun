@@ -6,14 +6,13 @@ Dataforfun
 <span style="color: blue">
 <h5> To Do: </h5>
 <ul>
-<li>Home page and About page  - review 2 examples</li>
-<li> Style images on Posts page </li>
 <li>Add Google Ads / Google Analytics </li>
 ---> Publish!
 
 <li>Main page: filter by category </li>
 </ul>
 </span>
+
 
 
 ## Images:
