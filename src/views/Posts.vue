@@ -316,7 +316,6 @@ export default {};
 
 .card-footer:hover {
   border-radius: 5%;
-  /* background-color: #58c2f3; */
 }
 
 
