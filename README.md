@@ -5,25 +5,11 @@ Dataforfun
 </span>
 <span style="color: blue">
 <h5> To Do: </h5>
-<ul>
-<li>Add Google Ads / Google Analytics </li>
----> Publish!
+<ol>
 
 <li>Main page: filter by category </li>
-</ul>
+</ol>
 </span>
-
-
-
-## Images:
-  <img class="aligncenter wp-image-569 size-full" 
-  src="../assets/Number-of-Reviews-of-Top-100-Restaurants.jpg" 
-  alt="Review's Histogram of top 100 Yelp Restaurants" 
-  width="479" height="480" 
-  srcset="../assets/Number-of-Reviews-of-Top-100-Restaurants.jpg 479w, 
-  ../assets/Number-of-Reviews-of-Top-100-Restaurants-150x150.jpg 150w, 
-  ../assets/Number-of-Reviews-of-Top-100-Restaurants-300x300.jpg 300w" 
-  sizes="(max-width: 479px) 100vw, 479px" />
 
 ## Git add-commit-push:
 ```
@@ -55,5 +41,4 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-//Vue router transitions
-https://markus.oberlehner.net/blog/vue-router-page-transitions/
+Vue router transitions [routing transitions](https://markus.oberlehner.net/blog/vue-router-page-transitions/)
