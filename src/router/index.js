@@ -105,8 +105,9 @@ const router = new VueRouter({
 })
 
 import VueAnalytics from 'vue-analytics'
+
 Vue.use(VueAnalytics, {
-  id: 'UA-XXX-X',
-  router
+  id: 'UA-57147400-2'
 })
+
 export default router
