@@ -4,11 +4,11 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
-import VueAnalytics from 'vue-analytics'
+// import VueAnalytics from 'vue-analytics'
 
-Vue.use(VueAnalytics, {
-  id: 'UA-57147400-2'
-})
+// Vue.use(VueAnalytics, {
+//   id: 'UA-57147400-2'
+// })
 
 Vue.config.productionTip = false
 

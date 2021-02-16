@@ -100,10 +100,13 @@ const router = new VueRouter({
       return { x: 0, y: 0 }
     
   },
-
   base: process.env.BASE_URL,
   routes,
-
 })
 
+import VueAnalytics from 'vue-analytics'
+Vue.use(VueAnalytics, {
+  id: 'UA-XXX-X',
+  router
+})
 export default router
