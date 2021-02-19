@@ -104,7 +104,6 @@ they are the most popular ones.</p>
 <p>
   <div style="width: 332px" class="ml-6">
   <img aria-describedby="caption-attachment-565" 
-  class="wp-image-565 size-full" 
   src="../assets/Top-Reviewed-Restaurants-e1481657780925.png" 
   alt="top-reviewed-restaurants" 
   width="322" height="262" 
@@ -117,7 +116,7 @@ they are the most popular ones.</p>
 </p>
 
 <p>
-  <img class="aligncenter wp-image-569 size-full" 
+  <img  
   src="../assets/Number-of-Reviews-of-Top-100-Restaurants.jpg" 
   alt="Review's Histogram of top 100 Yelp Restaurants" 
   width="479" height="480" 
@@ -295,7 +294,6 @@ vcounts<span style="color: #080;">;</span>ecounts
   <figure>
 
   <img aria-describedby="caption-attachment-564" 
-  class="wp-image-564 size-full" 
   src="../assets/Degrees-Distributions.png" 
   alt="degrees distribution on normal scale and log 10 scale" 
   width="480" height="480" 
@@ -420,7 +418,7 @@ degrees_table <span style="color: #080;">&lt;-</span> <a href="http://astrostati
 degrees_table$Degree <span style="color: #080;">&lt;-</span> <a href="http://astrostatistics.psu.edu/su07/R/html/graphics/html/as.integer.html"><span style="color: #0000FF; font-weight: bold;">as.<span style="">integer</span></span></a><span style="color: #080;">&#40;</span>degrees_table$Degree<span style="color: #080;">&#41;</span></pre></td></tr></table></div>
 
 <figure class="my-4">
-  <img class="aligncenter wp-image-567 size-full" 
+  <img 
   src="../assets/Vertex-Degrees-vs.-Neighbors-Degrees.png" 
   alt="vertex-degrees-vs-neighbors-degrees" 
   width="480" height="480" 
@@ -491,7 +489,6 @@ degrees_table$Degree <span style="color: #080;">&lt;-</span> <a href="http://ast
     <figure>
 
     <img aria-describedby="caption-attachment-583" 
-    class="wp-image-583 size-full" 
     src="../assets/Top-Users-by-Centrality-Rank-768x479.png" 
     alt="Top Users By Betweenes Centrality" 
     width="700" height="567" 

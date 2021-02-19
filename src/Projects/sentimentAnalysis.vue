@@ -141,7 +141,6 @@
 
 <figure>
           <img
-            class="aligncenter wp-image-465 size-full"
             title="Basic Algorithm - Raw Numbers"
             src="../assets/Baisc_raw_numbers.png"
             alt="baisc_raw_numbers"
@@ -153,7 +152,6 @@
             "
             sizes="(max-width: 490px) 100vw, 490px"
           /><img
-            class="aligncenter wp-image-464 size-full"
             title="Basic Algorithm - Percentages"
             src="../assets/Baisc_perc_numbers.png"
             alt="baisc_perc_numbers"
@@ -309,7 +307,6 @@
 </div>
         <figure>
           <img
-            class="aligncenter wp-image-463 size-full"
             title="Advanced Algorithm - Raw Numbers"
             src="../assets/Adv_raw_numbers.png"
             alt="adv_raw_numbers"
@@ -326,7 +323,6 @@
 
         <figure>
           <img
-            class="aligncenter wp-image-462 size-full"
             title="Advanced Algorithm - Percentages"
             src="../assets/Adv_perc_numbers.png"
             alt="adv_perc_numbers"
