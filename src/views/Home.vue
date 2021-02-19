@@ -2,7 +2,7 @@
   <div class="home">
     <div style="margin-top:1rem;"></div>
 
-    <home-main> </home-main>>
+    <home-main> </home-main>
     
   </div>
 </template>

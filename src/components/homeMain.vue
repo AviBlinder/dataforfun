@@ -46,7 +46,6 @@
               </button>
             </div>
           </div>
-          <!-- <div class="column is-narrow"></div> -->
         </div>
       </div>
     </section>
