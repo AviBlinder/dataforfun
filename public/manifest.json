@@ -2,6 +2,11 @@
   "name": "DataForFun",
   "short_name": "DataForFun",
   "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "dir": "ltr",
+ "lang": "en-US",  
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -70,7 +75,5 @@
       "sizes": "150x150",
       "type": "image/png"
     }
-  ],
-  "display": "standalone",
-  "background_color": "#ffffff"
+  ]
 }
