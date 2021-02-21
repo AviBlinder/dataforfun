@@ -22,51 +22,49 @@ window.addEventListener('appinstalled', () => {
   console.log('PWA was installed');
 });
 
-var CACHE_STATIC_NAME = 'static-v1';
-var CACHE_DYNAMIC_NAME = 'dynamic-v1';
-
-self.addEventListener('install', function(event) {
-  console.log('[Service Worker] Installing Service Worker ...', event);
-//event.waitUntil will ensure that the installation step finished setting all the cache before it states that it's done
-  event.waitUntil(
-    caches.open(CACHE_STATIC_NAME)
-      .then(function(cache) {
-        console.log('[Service Worker] Precaching App Shell');
-        cache.addAll([
+// 
+// Caching and Fetching Cached data
+// 
+const cacheName = "kaldiPWA-v1";
+const filesToCache = [
           '/',
-          '/index.html',
           '/dist/img/',
           'https://use.fontawesome.com/releases/v5.4.1/css/all.css',
           'https://fonts.googleapis.com/css?family=Open+Sans',
           'https://unpkg.com/bulma@0.9.0/css/bulma.min.css'
-        ]);
-      })
-  )
-});
+];
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-//if the data is cached, we fetch it.
-//Otherwise we fetch data from the Network and cache it
-    caches.match(event.request)
-      .then(function(response) {
-            //response = cached data
-        if (response) {
-          return response;
-        } else {
-            //fetch(event.request) = continue with Network request
-          return fetch(event.request)
-            .then(function(res) {
-              return caches.open(CACHE_DYNAMIC_NAME)
-                .then(function(cache) {
-                  cache.put(event.request.url, res.clone());
-                  return res;
-                })
-            })
-            .catch(function(err) {
-
-            });
-        }
-      })
+self.addEventListener("install", function(event) {
+  // Perform install steps
+  console.log("[Servicework] Install");
+  event.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log("[ServiceWorker] Caching app shell");
+      return cache.addAll(filesToCache);
+    })
   );
 });
+
+self.addEventListener("activate", function(event) {
+  console.log("[Servicework] Activate");
+  event.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log("[ServiceWorker] Removing old cache shell", key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+});
+
+self.addEventListener("fetch", (event) => {
+  console.log("[ServiceWorker] Fetch");
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+
+})
