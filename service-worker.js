@@ -34,7 +34,7 @@ const filesToCache = [
           'https://unpkg.com/bulma@0.9.0/css/bulma.min.css'
 ];
 
-self.addEventListener("install", function(event) {
+window.addEventListener("install", function(event) {
   // Perform install steps
   console.log("[Servicework] Install");
   event.waitUntil(
@@ -45,7 +45,7 @@ self.addEventListener("install", function(event) {
   );
 });
 
-self.addEventListener("activate", function(event) {
+window.addEventListener("activate", function(event) {
   console.log("[Servicework] Activate");
   event.waitUntil(
     caches.keys().then(function(keyList) {
@@ -59,7 +59,7 @@ self.addEventListener("activate", function(event) {
   );
 });
 
-self.addEventListener("fetch", (event) => {
+window.addEventListener("fetch", (event) => {
   console.log("[ServiceWorker] Fetch");
   event.respondWith(
     caches.match(event.request).then(function(response) {
