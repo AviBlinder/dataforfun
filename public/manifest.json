@@ -5,7 +5,7 @@
   "display": "standalone",
   "orientation": "portrait-primary",
   "dir": "ltr",
- "lang": "en-US",  
+  "lang": "en-US",  
   "background_color": "#ffffff",
   "icons": [
     {
