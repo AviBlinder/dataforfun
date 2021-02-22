@@ -2,14 +2,9 @@
   <div id="app">
       
       <main-navbar> </main-navbar>
-        <!-- mode="out-in" -->
-  <!-- <transition
-        name="fade"
-      >
-      <keep-alive> -->
-    <router-view> </router-view>
-      <!-- </keep-alive>
-  </transition> -->
+  
+      <router-view> </router-view>
+  
   </div>
 </template>
 
