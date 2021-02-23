@@ -13,7 +13,11 @@ Dataforfun
 
 ## Git add-commit-push:
 ```
-npm run git:commit --comment="test script"
+
+git branch dff-pwa
+git checkout dff-pwa
+
+npm run git:commit2branch --comment="test script"
 
 ```
 
