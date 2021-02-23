@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "git:commit": "git add . && git commit -m '$npm_config_comment' && git push -u origin main",
+    "git:commit2branch": "git add . && git commit -m '$npm_config_comment' && git push -u origin dff-pwa",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
