@@ -16,7 +16,8 @@ registerRoute(
 registerRoute(
   ({ url }) =>
     url.origin === 'https://fonts.googleapis.com' ||
-    url.origin === 'https://fonts.gstatic.com',
+    url.origin === 'https://fonts.gstatic.com' ||
+    url.origin === 'https://use.fontawesome.com',
   new StaleWhileRevalidate({
     cacheName: 'google-fonts-stylesheets',
     plugins: [
