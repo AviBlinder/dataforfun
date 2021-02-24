@@ -28,6 +28,10 @@
     "@vue/cli-service": "~4.5.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "workbox-cacheable-response": "^6.1.1",
+    "workbox-expiration": "^6.1.1",
+    "workbox-routing": "^6.1.1",
+    "workbox-strategies": "^6.1.1"
   }
 }
