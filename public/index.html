@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>Dataforfun - DataScience, Software Architecture and more</title>
+<!--  Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+        <!-- <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+        <!-- Fonts -->
+        <link 
+        href="https://fonts.googleapis.com/css?family=Open+Sans" 
+        rel="stylesheet"
+        crossorigin="anonymous"        
+        >
+        <!-- Bulma Version 0.9.0-->
+        <link rel="stylesheet" 
+        href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" 
+        crossorigin="anonymous"
+        >
+
+        <!-- Algolia Search Engine -->
+        <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+<script type="text/javascript">
+  algoliasearchNetlify({
+    appId: 'C6UUO0577K',
+    apiKey: 'ab6b82e12f2034364773067e0cb3e984',
+    siteId: 'a6bcfa0f-02ea-4d06-bfee-3251319bb4fa',
+    branch: 'main',
+    selector: 'div#search',
+  });
+</script> -->
+
+      <!-- link to manifest file -->
+       <link rel="manifest" href="/manifest.json">
+      </head>
+  <body class="has-navbar-fixed-top">
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
