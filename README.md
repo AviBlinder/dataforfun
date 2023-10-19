@@ -44,3 +44,7 @@ npm install
 ```
 npm run serve
 ```
+
+### Buy me a Coffee
+
+[Feel Free to buy me a coffee](https://ko-fi.com/aviblinder)
