@@ -24,12 +24,12 @@
                     :to="{ name: 'social-network-analysis' }"
                     tag="a"
                   >
-                    Show me
+                    Read more
                   </router-link>
                 </p>
               </footer>
             </div>
-          </div>          
+          </div>
           <!-- Sentiment Analysis  -->
           <div class="column is-4-tablet is-3-desktop">
             <div class="card">
@@ -51,7 +51,7 @@
                     style="margin-left: 1rem"
                     :to="{ name: 'sentiment-analysis' }"
                     tag="a"
-                    >Show me
+                    >Read more
                   </router-link>
                 </p>
               </footer>
@@ -78,57 +78,54 @@
                     :to="{ name: 'comparing-healthy-life' }"
                     tag="a"
                   >
-                    Show me
+                    Read more
                   </router-link>
                 </p>
               </footer>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
   </div>
 </template>
 
 <script>
-import generalCard from "@/components/generalCard.vue";
+  import generalCard from '@/components/generalCard.vue';
 
-export default {
-  name: "projects",
-  components: {
-    generalCard,
-  },
-  data() {
-    return {
-      projects: [
-        {
-          id: 1,
-          title: "Sentiment Analysis",
-          content: "Sentiment Analysis",
-          target: "sentiment-analysis",
-          image: require("../assets/easter-1238465__340-400x284.jpg"),
-        },
-        {
-          id: 2,
-          title: "Healthy Life Expectancy",
-          content: "Healthy Life Expectancy",
-          target: "comparing-healthy-life",
-          image: require("../assets/elder-woman-with-hat-400x284.jpg"),
-        },
-        {
-          id: 3,
-          title: "Social Network Analysis",
-          content: "Social Network Analysis",
-          target: "social-network-analysis",
-          image: require("../assets/fishing-net-1526496__180.jpg"),
-        },
-      ],
-    };
-  },
-};
+  export default {
+    name: 'projects',
+    components: {
+      generalCard,
+    },
+    data() {
+      return {
+        projects: [
+          {
+            id: 1,
+            title: 'Sentiment Analysis',
+            content: 'Sentiment Analysis',
+            target: 'sentiment-analysis',
+            image: require('../assets/easter-1238465__340-400x284.jpg'),
+          },
+          {
+            id: 2,
+            title: 'Healthy Life Expectancy',
+            content: 'Healthy Life Expectancy',
+            target: 'comparing-healthy-life',
+            image: require('../assets/elder-woman-with-hat-400x284.jpg'),
+          },
+          {
+            id: 3,
+            title: 'Social Network Analysis',
+            content: 'Social Network Analysis',
+            target: 'social-network-analysis',
+            image: require('../assets/fishing-net-1526496__180.jpg'),
+          },
+        ],
+      };
+    },
+  };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
