@@ -87,7 +87,7 @@
                           communication from the private subnet to the Internet
                           (mainly in order to get software updates), a NAT
                           gateway is created and placed on one of the public
-                          subnets. The the sole purpose of the NAT instance is
+                          subnets. The sole purpose of the NAT instance is
                           enabling safe traffic from the private subnet to the
                           Internet.
                         </li>
@@ -395,28 +395,28 @@
 </template>
 
 <script>
-import postsSideBar from "@/components/postsSideBar";
-export default {
-  components: {
-    postsSideBar,
-  },
-  data() {
-    return {
-      post_id: 4,
-    };
-  },
-};
+  import postsSideBar from '@/components/postsSideBar';
+  export default {
+    components: {
+      postsSideBar,
+    },
+    data() {
+      return {
+        post_id: 4,
+      };
+    },
+  };
 </script>
 
 <style scoped>
-mark {
-  background-color: rgb(104, 242, 247);
-}
-.is-horizontal-center {
-  justify-content: center;
-}
+  mark {
+    background-color: rgb(104, 242, 247);
+  }
+  .is-horizontal-center {
+    justify-content: center;
+  }
 
-.card {
-  box-shadow: none;
-}
+  .card {
+    box-shadow: none;
+  }
 </style>
